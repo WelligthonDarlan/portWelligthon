@@ -1,0 +1,5054 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="Bem vindo ao meu portfólio, sou um apaixonado desenvolvedor web Full Stack, com uma sólida experiência em criar soluções web inovadoras e interativas, estou comprometido em transformar ideias em realidade digital.">
+    <meta name="keywords"
+        content="Desenvolvedor Web, JavaScript, Full Stack, Front-end, Back-end, React, Node.js, portfolio, HTML, CSS, Interface de Usuário, UX/UI, Desenvolvimento de Aplicações Web, Programação, Web Design, Responsive Design, Banco de Dados, MongoDB, Git, Controle de Versão, Desenvolvimento Ágil, Projeto de Software, Portfólio Online, Websites Interativos">
+    <meta name="author" content="Welligthon Paluchowski">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Portfólio Welligthon Paluchowski">
+    <meta property="og:description"
+        content="Bem vindo ao meu portfólio, sou um apaixonado desenvolvedor web Full Stack, com uma sólida experiência em criar soluções web inovadoras e interativas, estou comprometido em transformar ideias em realidade digital.">
+    <meta property="og:image" content="https://welligthon.com/images/user.webp">
+    <meta property="og:url" content="https://welligthon.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Raleway&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="shortcut icon" href="./images/icons/icons.png" type="image/x-icon">
+    <style>
+        #myWork,
+        #myWorkTitle {
+            height: 100%;
+            width: 100%
+        }
+
+        #myWorkTitle,
+        .principles h1 {
+            font-family: "Chakra Petch", sans-serif
+        }
+
+        .contentCard,
+        .links {
+            position: relative;
+            transition: .3s
+        }
+
+        #upArrow,
+        .btnCard,
+        .links {
+            cursor: pointer
+        }
+
+        #slide1-1,
+        #slide1-2,
+        #slide1-3,
+        #slide2-1,
+        #slide2-2,
+        #slide2-3,
+        #slide3-1,
+        #slide3-2,
+        #slide3-3,
+        #slide4-1,
+        #slide4-2,
+        #slide4-3,
+        #slide5-1,
+        #slide5-2,
+        #slide5-3,
+        #slide6-1,
+        #slide6-2,
+        #slide6-3 {
+            animation: .3s forwards slide
+        }
+
+        #h1Animation span,
+        #workMe,
+        .links {
+            color: #2bdefd
+        }
+
+        #ViewMyWork,
+        #canvas {
+            background-color: #252934
+        }
+
+        #ViewMyWork,
+        #h1Animation {
+            left: 300px;
+            z-index: 30000
+        }
+
+        #myWork {
+            color: #ababab;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 200px;
+            text-align: center;
+            gap: 30px
+        }
+
+        #myWorkTitle {
+            padding-top: 60px;
+            font-size: 40px;
+            font-weight: 600;
+            color: #d7f9ff
+        }
+
+        .containerPrinciples {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            padding: 100px
+        }
+
+        .principles {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around
+        }
+
+        .principles img {
+            background-color: #2bddfdbd;
+            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+            padding: 10px;
+            width: 100px
+        }
+
+        .principles h1 {
+            text-align: center;
+            padding: 10px;
+            font-size: 35px;
+            color: #d7f9ff
+        }
+
+        .contentLinks ul li,
+        .contentLinks ul li span,
+        .principles p {
+            font-family: Raleway, sans-serif
+        }
+
+        .links,
+        .principles p {
+            text-align: center;
+            font-size: 20px
+        }
+
+        .principles p {
+            width: 490px;
+            padding: 30px;
+            color: #d7f9ff
+        }
+
+        #description,
+        #download,
+        #projectsTitle,
+        .aboutMeTitle,
+        .card h1,
+        .informCard h1,
+        .links,
+        .titleContactLeft {
+            font-family: "Chakra Petch", sans-serif
+        }
+
+        .card h1,
+        .card p {
+            transform: translateY(-100px);
+            color: #1b242f
+        }
+
+        .containerMyWork {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: start;
+            width: 100%;
+            height: 100%
+        }
+
+        #projects,
+        .containerRight {
+            align-items: center;
+            height: 100%
+        }
+
+        .myWorkLeft {
+            width: 50%
+        }
+
+        .myWorkLeft img {
+            position: relative;
+            width: 60%;
+            height: 100%;
+            animation: 3s infinite mymove
+        }
+
+        @keyframes mymove {
+
+            0%,
+            100% {
+                bottom: -20px
+            }
+
+            50% {
+                bottom: 10px
+            }
+        }
+
+        .myWorkRight {
+            width: 50%;
+            height: 100%
+        }
+
+        .containerRight {
+            width: 100%;
+            padding: 0 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .containerLinks {
+            display: flex;
+            width: 100%
+        }
+
+        .links {
+            width: 100%;
+            font-weight: 100
+        }
+
+        .links:hover {
+            color: #2bddfd93
+        }
+
+        .links::after {
+            content: "";
+            width: 0%;
+            height: 3px;
+            background: #2bdefd;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            display: flex;
+            flex-direction: column;
+            transition: .5s
+        }
+
+        .links.active-link::after {
+            width: 100%
+        }
+
+        .contentLinks {
+            width: 100%;
+            height: 70%;
+            padding: 30px 5px;
+            align-items: start;
+            justify-content: start;
+            text-align: start;
+            display: none
+        }
+
+        #projects,
+        #upArrow,
+        .btnCard,
+        .carouselContent {
+            text-align: center
+        }
+
+        .contentLinks ul li span {
+            text-transform: uppercase;
+            color: #1e9db4;
+            font-size: 18px;
+            padding: 10px
+        }
+
+        .contentLinks ul li {
+            text-align: justify;
+            list-style: none;
+            font-size: 19px;
+            width: 100%;
+            padding: 10px 0
+        }
+
+        #chanel {
+            color: #ff8c2a;
+            font-weight: 900
+        }
+
+        .active-tab.active-tab {
+            display: block
+        }
+
+        #upArrow {
+            background-color: #ff8c2a;
+            padding: 13px;
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 4000;
+            animation: 2s fadeInAnimation;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            filter: drop-shadow(0px 0px 1px #fff);
+            clip-path: polygon(0 0, 50% 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
+            transition: clip-path .5s
+        }
+
+        #upArrow:hover {
+            background-color: #fa9945;
+            clip-path: polygon(0 30%, 50% 0, 100% 30%, 100% 100%, 50% 70%, 0 100%)
+        }
+
+        @media (min-width:1367px) and (max-width:1800px) {
+            #myWork {
+                padding: 0
+            }
+
+            .containerPrinciples {
+                gap: 30px
+            }
+
+            .principles {
+                width: 300px;
+                height: 300px
+            }
+
+            .principles img {
+                width: 80px
+            }
+
+            .principles p {
+                width: 290px;
+                height: 90px;
+                padding: 0;
+                text-align: center;
+                text-wrap: wrap
+            }
+
+            .containerMyWork {
+                height: 900px;
+                padding: 0 70px
+            }
+
+            .myWorkLeft {
+                height: 400px
+            }
+
+            .myWorkLeft img {
+                width: 400px
+            }
+
+            .containerRight {
+                padding: 0 20px
+            }
+
+            .links {
+                font-size: 16px
+            }
+
+            .contentLinks ul li,
+            .contentLinks ul li span {
+                font-size: 20px
+            }
+            .reconnect{
+            /* background-color: rgb(153, 51, 53); */
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+            justify-content: start !important;
+            /* align-self: flex-start; */
+            gap: 0px;
+            font-size: 14px;
+            padding: 0px 20px !important;
+            text-align: center !important;
+            margin: 0px !important;
+        }
+        .reconnect p b{
+            /* background-color: rgb(49, 175, 89); */
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            align-self: flex-start;
+            font-size: 14px !important;
+            /* border: 2px solid rgb(26, 255, 0); */
+            /* width: 100px !important; */
+            height: 100%;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .descriptionReconnect{
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            align-self: center !important;
+            text-align: center !important;
+            font-weight: 800 !important;
+            /* border: 2px solid orange !important; */
+        }
+        .reconnect p{
+            /* background-color: rebeccapurple; */
+            display: flex;
+            flex-direction: row;
+            align-items: start !important;
+            justify-content: start !important;
+            align-self: flex-start !important;
+            font-size: 14px !important;
+            padding: 4px 0px !important;
+            /* border: 2px solid yellow; */
+            width: 100% !important;
+            margin: 0px !important;
+        }
+        }
+
+        @media (min-width:1200px) and (max-width:1366px) {
+            #myWork {
+                padding: 0
+            }
+
+            .containerPrinciples {
+                gap: 30px
+            }
+
+            .principles {
+                justify-content: center;
+                width: 300px;
+                height: 300px
+            }
+
+            .principles img {
+                width: 80px
+            }
+
+            .principles p {
+                width: 290px;
+                height: 90px;
+                padding: 0;
+                text-wrap: wrap
+            }
+
+            .containerMyWork {
+                height: 900px;
+                padding: 0 30px
+            }
+
+            .myWorkLeft {
+                height: 400px
+            }
+
+            .myWorkLeft img {
+                width: 400px
+            }
+
+            .containerRight {
+                padding: 0 20px
+            }
+
+            .links {
+                font-size: 14px
+            }
+            .reconnect{
+            /* background-color: rgb(153, 51, 53); */
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+            justify-content: start !important;
+            /* align-self: flex-start; */
+            gap: 0px;
+            font-size: 14px;
+            padding: 0px 20px !important;
+            text-align: center !important;
+            margin: 0px !important;
+        }
+        .reconnect p b{
+            /* background-color: rgb(49, 175, 89); */
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            align-self: flex-start;
+            font-size: 14px !important;
+            /* border: 2px solid rgb(26, 255, 0); */
+            /* width: 100px !important; */
+            height: 100%;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .descriptionReconnect{
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            align-self: center !important;
+            text-align: center !important;
+            font-weight: 800 !important;
+            /* border: 2px solid orange !important; */
+        }
+        .reconnect p{
+            /* background-color: rebeccapurple; */
+            display: flex;
+            flex-direction: row;
+            align-items: start !important;
+            justify-content: start !important;
+            align-self: flex-start !important;
+            font-size: 14px !important;
+            padding: 4px 0px !important;
+            /* border: 2px solid yellow; */
+            width: 100% !important;
+            margin: 0px !important;
+        }
+        }
+
+        @media (min-width:1001px) and (max-width:1200px) {
+            #myWork {
+                padding: 0
+            }
+
+            .containerPrinciples {
+                gap: 30px
+            }
+
+            .principles {
+                justify-content: center;
+                width: 300px;
+                height: 300px
+            }
+
+            .principles img {
+                width: 80px
+            }
+
+            .principles p {
+                width: 290px;
+                height: 90px;
+                padding: 0;
+                text-wrap: wrap
+            }
+
+            .containerMyWork {
+                height: 800px
+            }
+
+            .myWorkLeft {
+                height: 400px
+            }
+
+            .myWorkLeft img {
+                width: 400px
+            }
+
+            .containerRight {
+                padding: 0 20px
+            }
+
+            .links {
+                font-size: 14px
+            }
+            .reconnect{
+            /* background-color: rgb(153, 51, 53); */
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+            justify-content: start !important;
+            /* align-self: flex-start; */
+            gap: 0px;
+            font-size: 14px;
+            padding: 0px 20px !important;
+            text-align: center !important;
+            margin: 0px !important;
+        }
+        .reconnect p b{
+            /* background-color: rgb(49, 175, 89); */
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            align-self: flex-start;
+            font-size: 14px !important;
+            /* border: 2px solid rgb(26, 255, 0); */
+            /* width: 100px !important; */
+            height: 100%;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .descriptionReconnect{
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            align-self: center !important;
+            text-align: center !important;
+            font-weight: 800 !important;
+            /* border: 2px solid orange !important; */
+        }
+        .reconnect p{
+            /* background-color: rebeccapurple; */
+            display: flex;
+            flex-direction: row;
+            align-items: start !important;
+            justify-content: start !important;
+            align-self: flex-start !important;
+            font-size: 14px !important;
+            padding: 4px 0px !important;
+            /* border: 2px solid yellow; */
+            width: 100% !important;
+            margin: 0px !important;
+        }
+        }
+
+        @media (min-width:801px) and (max-width:1000px) {
+            #myWork {
+                gap: 0;
+                padding: 60px
+            }
+
+            #myWorkTitle {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                font-size: 34px
+            }
+
+            .containerPrinciples {
+                flex-direction: column;
+                padding: 30px 80px;
+                gap: 40px
+            }
+
+            .principles {
+                width: 100%;
+                gap: 10px
+            }
+
+            .principles img {
+                width: 80px
+            }
+
+            .principles h1 {
+                padding: 0;
+                font-size: 28px
+            }
+
+            .principles p {
+                width: 100%;
+                padding: 0;
+                font-size: 22px
+            }
+
+            .containerMyWork {
+                flex-direction: column
+            }
+
+            .myWorkLeft {
+                width: 100%
+            }
+
+            .myWorkLeft img {
+                width: 80%;
+                height: 80%;
+                padding: 100px 0 10px
+            }
+
+            .myWorkRight {
+                width: 100%;
+                height: 800px;
+                padding: 10px 5px
+            }
+
+            .containerRight {
+                padding: 0
+            }
+
+            .links {
+                font-size: 23px
+            }
+
+            .links::after {
+                height: 1px
+            }
+
+            .contentLinks ul li span {
+                font-size: 20px
+            }
+
+            .contentLinks ul li {
+                font-size: 22px;
+                text-align: center
+            }
+
+            #upArrow {
+                padding: 7px;
+                width: 30px;
+                height: 30px;
+                bottom: 10px;
+                right: 10px
+            }
+            .reconnect{
+            /* background-color: rgb(153, 51, 53); */
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+            justify-content: start !important;
+            /* align-self: flex-start; */
+            gap: 0px;
+            font-size: 14px;
+            padding: 0px 20px !important;
+            text-align: center !important;
+            margin: 0px !important;
+        }
+        .reconnect p b{
+            /* background-color: rgb(49, 175, 89); */
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            align-self: flex-start;
+            font-size: 14px !important;
+            /* border: 2px solid rgb(26, 255, 0); */
+            /* width: 100px !important; */
+            height: 100%;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .descriptionReconnect{
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            align-self: center !important;
+            text-align: center !important;
+            font-weight: 800 !important;
+            /* border: 2px solid orange !important; */
+        }
+        .reconnect p{
+            /* background-color: rebeccapurple; */
+            display: flex;
+            flex-direction: row;
+            align-items: start !important;
+            justify-content: start !important;
+            align-self: flex-start !important;
+            font-size: 14px !important;
+            padding: 4px 0px !important;
+            /* border: 2px solid yellow; */
+            width: 100% !important;
+            margin: 0px !important;
+        }
+        }
+
+        @media (min-width:601px) and (max-width:800px) {
+            #myWork {
+                gap: 0;
+                padding: 60px
+            }
+
+            #myWorkTitle {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                font-size: 30px
+            }
+
+            .containerPrinciples {
+                flex-direction: column;
+                padding: 30px 5px;
+                gap: 40px
+            }
+
+            .principles {
+                width: 100%;
+                gap: 10px
+            }
+
+            .principles img {
+                width: 70px
+            }
+
+            .principles h1 {
+                padding: 0;
+                font-size: 22px
+            }
+
+            .principles p {
+                width: 100%;
+                padding: 0;
+                font-size: 16px
+            }
+
+            .containerMyWork {
+                flex-direction: column
+            }
+
+            .myWorkLeft {
+                width: 100%
+            }
+
+            .myWorkLeft img {
+                width: 80%;
+                height: 80%;
+                padding: 100px 0 10px
+            }
+
+            .myWorkRight {
+                width: 100%;
+                height: 800px;
+                padding: 10px 5px
+            }
+
+            .containerRight {
+                padding: 0
+            }
+
+            .links {
+                font-size: 18px
+            }
+
+            .links::after {
+                height: 1px
+            }
+
+            .contentLinks ul li span {
+                font-size: 16px;
+                font-weight: 600
+            }
+
+            .contentLinks ul li {
+                font-size: 20px;
+                text-align: center
+            }
+
+            #upArrow {
+                padding: 7px;
+                width: 30px;
+                height: 30px;
+                bottom: 10px;
+                right: 10px
+            }
+            .reconnect{
+            /* background-color: rgb(153, 51, 53); */
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+            justify-content: start !important;
+            /* align-self: flex-start; */
+            gap: 0px;
+            font-size: 14px;
+            padding: 0px 20px !important;
+            text-align: center !important;
+            margin: 0px !important;
+        }
+        .reconnect p b{
+            /* background-color: rgb(49, 175, 89); */
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            align-self: flex-start;
+            font-size: 14px !important;
+            /* border: 2px solid rgb(26, 255, 0); */
+            /* width: 100px !important; */
+            height: 100%;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .descriptionReconnect{
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            align-self: center !important;
+            text-align: center !important;
+            font-weight: 800 !important;
+            /* border: 2px solid orange !important; */
+        }
+        .reconnect p{
+            /* background-color: rebeccapurple; */
+            display: flex;
+            flex-direction: row;
+            align-items: start !important;
+            justify-content: start !important;
+            align-self: flex-start !important;
+            font-size: 14px !important;
+            padding: 4px 0px !important;
+            /* border: 2px solid yellow; */
+            width: 100% !important;
+            margin: 0px !important;
+        }
+        }
+
+        .card,
+        .contentCard {
+            width: 400px;
+            height: 400px;
+            display: flex
+        }
+
+        #projects {
+            background-color: #f5f5f5;
+            color: #444649;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 200px 200px;
+            clip-path: polygon(0 0, 100% 0, 100% 97%, 50% 100%, 0 97%)
+        }
+
+        #projectsTitle {
+            font-size: 40px;
+            font-weight: 600;
+            color: #444649;
+            width: 100%;
+            height: 100%;
+            padding: 100px 0
+        }
+
+        #containerProjects {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%
+        }
+
+        .card {
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain
+        }
+
+        .carouselBtnClose:hover,
+        .carouselBtnNext:hover,
+        .carouselBtnPrev:hover,
+        .contentCard:hover,
+        .opacityOn {
+            opacity: 1
+        }
+
+        .navOpacityOff,
+        .opacityOff,
+        [data-animate] {
+            opacity: 0
+        }
+
+        .contentCard {
+            background: #f5f5f5;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px
+        }
+
+        #aboutMe,
+        .carouselSlide {
+            background-repeat: no-repeat;
+            background-position: center
+        }
+
+        .btnCard,
+        .card h1,
+        .card p {
+            transition: transform .5s, opacity .5s;
+            opacity: 0
+        }
+
+        .card h1 {
+            font-size: 25px
+        }
+
+        .contentCard:hover .btnCard,
+        .contentCard:hover h1,
+        .contentCard:hover p {
+            transform: translateY(0);
+            opacity: 1
+        }
+
+        .card p {
+            font-size: 14px
+        }
+
+        .informCard h1,
+        .informCard p {
+            color: #444649;
+            transform: translateY(0)
+        }
+
+        .btnCard {
+            transform: translateY(100px);
+            border: 3px solid #2bdefd;
+            padding: 10px 30px;
+            font-size: 15px;
+            color: #000
+        }
+
+        .btnCard:hover {
+            background-color: #2bdefd;
+            color: #fff
+        }
+
+        @keyframes fade {
+            0% {
+                transform: translate(0, 300px) scale(.5);
+                opacity: 0
+            }
+
+            50% {
+                transform: translate(0, 600px) scale(.5);
+                opacity: 0
+            }
+
+            100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1 !important
+            }
+        }
+
+        .carouselContainer {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, .8);
+            z-index: 999;
+            padding: 80px 400px
+        }
+
+        #canvas,
+        #download,
+        .carouselContent {
+            position: relative
+        }
+
+        .carouselContent {
+            width: 100%;
+            height: 100%;
+            animation: .2s forwards carouselOpen
+        }
+
+        @keyframes carouselOpen {
+            0% {
+                transform: scale(.5)
+            }
+
+            100% {
+                transform: scale(1)
+            }
+        }
+
+        .carouselSlides {
+            width: 100%;
+            height: 100%;
+            gap: 0;
+            padding: 0
+        }
+
+        .containerImage {
+            height: 60%;
+            background-color: #ffffffdd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            padding-top: 20px
+        }
+
+        .carouselSlide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            background-size: contain;
+            width: 100%;
+            height: 100%
+        }
+        .reconnect{
+            /* background-color: rgb(153, 51, 53); */
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+            justify-content: start !important;
+            /* align-self: flex-start; */
+            gap: 0px;
+            font-size: 16px;
+            padding: 0px 20px !important;
+            text-align: center !important;
+            margin: 0px !important;
+            white-space: wrap !important;
+         }
+        .reconnect p b{
+            /* background-color: rgb(49, 175, 89); */
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            align-self: flex-start;
+            font-size: 16px;
+            /* border: 2px solid rgb(26, 255, 0); */
+            /* width: 100px !important; */
+            height: 100%;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .descriptionReconnect{
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            align-self: center !important;
+            text-align: center !important;
+            font-weight: 800 !important;
+            /* border: 2px solid orange !important; */
+        }
+        .reconnect p{
+            /* background-color: rebeccapurple; */
+            display: flex;
+            flex-direction: row;
+            align-items: start !important;
+            justify-content: start !important;
+            align-self: flex-start !important;
+            font-size: 14px;
+            padding: 4px 0px !important;
+            /* border: 2px solid yellow; */
+            width: 100% !important;
+            margin: 0px !important;
+        }
+
+        .informCard,
+        .informCard h1 {
+            align-items: center;
+            width: 100%
+        }
+
+        .carouselBtnNext,
+        .carouselBtnPrev {
+            background-image: linear-gradient(to bottom, transparent, transparent, #f5f5f555, transparent, transparent);
+            border: none;
+            opacity: .5;
+            height: 200px;
+            background-color: transparent;
+            position: absolute;
+            cursor: pointer
+        }
+
+        .carouselBtnNext {
+            clip-path: polygon(0 0, 0% 100%, 100% 50%);
+            right: 0
+        }
+
+        .carouselBtnPrev {
+            clip-path: polygon(100% 0, 100% 100%, 0 50%);
+            left: 0
+        }
+
+        .informCard {
+            background-color: #ffffffdd;
+            padding: 2px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            opacity: 1;
+            height: 40%
+        }
+
+        .informCard p,
+        .slideLinks {
+            padding: 20px;
+            display: flex
+        }
+
+        .informCard h1 {
+            font-size: 30px;
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            height: 25%
+        }
+
+        .separete {
+            width: 100%;
+            height: 3px;
+            background-color: #444649
+        }
+
+        .informCard p {
+            font-family: Raleway, sans-serif;
+            font-weight: 200;
+            font-size: 100%;
+            align-items: center;
+            text-align: justify;
+            opacity: 1;
+            width: 90%;
+            height: 40%
+        }
+
+        #ViewMyWork,
+        #containerYodaSMS,
+        #download,
+        #menuBtn,
+        #navbarDesktop,
+        .copyright,
+        .slideLinks a {
+            text-align: center;
+
+        }
+
+        .slideLinks {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 20%
+        }
+
+        .slideLinks a {
+            border: 3px solid #594dff;
+            width: 200px;
+            height: 40px;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #594dff;
+            color: #fff
+        }
+
+        .slideLinks a:hover {
+            border: 1px solid #594dff;
+            background-color: transparent;
+            color: #594dff;
+            font-weight: 900
+        }
+
+        .carouselBtnClose {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            width: 30px;
+            height: 30px;
+            opacity: .5;
+            cursor: pointer
+        }
+
+        #containerYodaSMS,
+        .iconWpp {
+            position: fixed;
+            z-index: 4999;
+            opacity: .7;
+            transition: .3s;
+            
+        }
+
+        @media (min-width:1600px) and (max-width:1919px) {
+            #projects {
+                padding: 0 0 200px;
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            #containerProjects {
+                padding: 0 180px
+            }
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            .carouselContainer {
+                padding: 80px 380px
+            }
+
+            .carouselBtnNext {
+                border: none;
+                width: 70px;
+                right: 0
+            }
+
+            .containerImage {
+                background-color: #ffffffff;
+                height: 60%
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 70px;
+                height: 70px
+            }
+
+            .carouselBtnPrev {
+                border: none;
+                width: 70px;
+                left: 0
+            }
+
+            .informCard {
+                height: 40%;
+                background-color: #ffffffff;
+                gap: 10px
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 18px;
+                padding: 25px;
+                width: 90%;
+                height: 40%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px;
+                height: 30px
+            }
+            .reconnect{
+            /* background-color: rgb(153, 51, 53); */
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+            justify-content: start !important;
+            /* align-self: flex-start; */
+            gap: 0px;
+            font-size: 14px;
+            padding: 0px 20px !important;
+            text-align: center !important;
+            margin: 0px !important;
+        }
+        .reconnect p b{
+            /* background-color: rgb(49, 175, 89); */
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            align-self: flex-start;
+            font-size: 14px !important;
+            /* border: 2px solid rgb(26, 255, 0); */
+            /* width: 100px !important; */
+            height: 100%;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .descriptionReconnect{
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            align-self: center !important;
+            text-align: center !important;
+            font-weight: 800 !important;
+            /* border: 2px solid orange !important; */
+        }
+        .reconnect p{
+            /* background-color: rebeccapurple; */
+            display: flex;
+            flex-direction: row;
+            align-items: start !important;
+            justify-content: start !important;
+            align-self: flex-start !important;
+            font-size: 14px !important;
+            padding: 4px 0px !important;
+            /* border: 2px solid yellow; */
+            width: 100% !important;
+            margin: 0px !important;
+        }
+        }
+
+        @media (min-width:1536px) and (max-width:1599px) {
+            #projects {
+                padding: 0 0 200px;
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            #containerProjects {
+                padding: 0 160px
+            }
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            .carouselContainer {
+                padding: 80px 250px
+            }
+
+            .carouselBtnNext {
+                border: none;
+                width: 70px;
+                right: 0
+            }
+
+            .containerImage {
+                background-color: #ffffffff;
+                height: 60%
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 70px;
+                height: 70px
+            }
+
+            .carouselBtnPrev {
+                border: none;
+                width: 70px;
+                left: 0
+            }
+
+            .informCard {
+                height: 40%;
+                background-color: #ffffffff;
+                gap: 10px
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 18px;
+                padding: 25px;
+                width: 90%;
+                height: 40%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px;
+                height: 30px
+            }
+
+            .containerBtnClose {
+                padding: 0 15px 10px 0;
+                height: 20%
+            }
+
+            .containerBtnClose img {
+                width: 20px;
+                height: 20px
+            }
+        }
+
+        @media (min-width:1440px) and (max-width:1535px) {
+            #projects {
+                padding: 0 0 200px;
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            #containerProjects {
+                padding: 0 150px
+            }
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            .carouselContainer {
+                padding: 80px 250px
+            }
+
+            .carouselBtnNext {
+                border: none;
+                width: 70px;
+                right: 0
+            }
+
+            .containerImage {
+                background-color: #ffffffff;
+                height: 60%
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 70px;
+                height: 70px
+            }
+
+            .carouselBtnPrev {
+                border: none;
+                width: 70px;
+                left: 0
+            }
+
+            .informCard {
+                height: 40%;
+                background-color: #ffffffff;
+                gap: 10px
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 18px;
+                padding: 25px;
+                width: 90%;
+                height: 40%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px;
+                height: 30px
+            }
+
+            .containerBtnClose {
+                padding: 0 15px 10px 0;
+                height: 20%
+            }
+
+            .containerBtnClose img {
+                width: 20px;
+                height: 20px
+            }
+        }
+
+        @media (min-width:1366px) and (max-width:1439px) {
+            #projects {
+                padding: 0 0 200px;
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            #containerProjects {
+                padding: 0 100px
+            }
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            .carouselContainer {
+                padding: 80px 250px
+            }
+
+            .carouselBtnNext {
+                border: none;
+                width: 70px;
+                right: 0
+            }
+
+            .containerImage {
+                background-color: #ffffffff;
+                height: 60%
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 70px;
+                height: 70px
+            }
+
+            .carouselBtnPrev {
+                border: none;
+                width: 70px;
+                left: 0
+            }
+
+            .informCard {
+                height: 40%;
+                background-color: #ffffffff;
+                gap: 10px
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 18px;
+                padding: 25px;
+                width: 90%;
+                height: 40%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px;
+                height: 30px
+            }
+
+            .containerBtnClose {
+                padding: 0 15px 10px 0;
+                height: 20%
+            }
+
+            .containerBtnClose img {
+                width: 20px;
+                height: 20px
+            }
+        }
+
+        @media (min-width:1280px) and (max-width:1365px) {
+            #projects {
+                padding: 0 0 200px;
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            #containerProjects {
+                padding: 100px
+            }
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            .carouselContainer {
+                padding: 80px 250px
+            }
+
+            .carouselBtnNext {
+                border: none;
+                width: 70px;
+                right: 0
+            }
+
+            .containerImage {
+                background-color: #ffffffff;
+                height: 60%
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 70px;
+                height: 70px
+            }
+
+            .carouselBtnPrev {
+                border: none;
+                width: 70px;
+                left: 0
+            }
+
+            .informCard {
+                height: 40%;
+                background-color: #ffffffff;
+                gap: 10px
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 18px;
+                padding: 25px;
+                width: 90%;
+                height: 40%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px;
+                height: 30px
+            }
+
+            .containerBtnClose {
+                padding: 0 15px 10px 0;
+                height: 20%
+            }
+
+            .containerBtnClose img {
+                width: 20px;
+                height: 20px
+            }
+        }
+
+        @media (min-width:1080px) and (max-width:1279px) {
+
+            .containerImage,
+            .informCard {
+                background-color: #ffffffff
+            }
+
+            #projects {
+                padding: 0 0 200px;
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            .carouselContainer {
+                padding: 80px 150px
+            }
+
+            .carouselBtnNext {
+                border: none;
+                width: 70px;
+                right: 0
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 70px;
+                height: 70px
+            }
+
+            .carouselBtnPrev {
+                border: none;
+                width: 70px;
+                left: 0
+            }
+
+            .informCard {
+                height: 40%;
+                gap: 10px
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 18px;
+                padding: 25px;
+                width: 80%;
+                height: 40%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px;
+                height: 30px
+            }
+
+            .containerBtnClose {
+                padding: 0 15px 10px 0;
+                height: 20%
+            }
+
+            .containerBtnClose img {
+                width: 20px;
+                height: 20px
+            }
+        }
+
+        @media (min-width:720px) and (max-width:1079px) {
+
+            .containerImage,
+            .informCard {
+                background-color: #ffffffff
+            }
+
+            #projects {
+                padding: 0 0 200px;
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            .carouselContainer {
+                padding: 80px
+            }
+
+            .carouselBtnNext {
+                border: none;
+                width: 70px;
+                right: 0
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 70px;
+                height: 70px
+            }
+
+            .carouselBtnPrev {
+                border: none;
+                width: 70px;
+                left: 0
+            }
+
+            .informCard {
+                height: 40%;
+                gap: 10px
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 18px;
+                padding: 25px;
+                width: 95%;
+                height: 50%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px;
+                height: 30px
+            }
+
+            .containerBtnClose {
+                height: 10%
+            }
+
+            .containerBtnClose img {
+                width: 20px;
+                height: 20px
+            }
+        }
+
+        @media (min-width:640px) and (max-width:719px) {
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            #projects,
+            .carouselContainer {
+                padding: 0
+            }
+
+            #projects {
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            #containerProjects {
+                gap: 20px;
+                padding-bottom: 150px
+            }
+
+            .card {
+                box-shadow: -2px 2px 4px 4px rgba(0, 0, 0, .2)
+            }
+
+            .carouselSlides {
+                height: 100vh
+            }
+
+            .containerImage {
+                height: 60%;
+                background-color: #ffffffff
+            }
+
+            .carouselBtnNext,
+            .carouselBtnPrev {
+                border: none;
+                width: 60px
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 60px;
+                height: 60px
+            }
+
+            .informCard {
+                height: 40%;
+                background-color: #ffffffff
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 20px;
+                padding: 15px;
+                width: 100%;
+                height: 45%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px
+            }
+
+            .containerBtnClose {
+                height: 15%
+            }
+        }
+
+        @media (min-width:480px) and (max-width:639px) {
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            #projects,
+            .carouselContainer {
+                padding: 0
+            }
+
+            #projects {
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            #containerProjects {
+                gap: 20px;
+                padding-bottom: 150px
+            }
+
+            .card {
+                box-shadow: -2px 2px 4px 4px rgba(0, 0, 0, .2)
+            }
+
+            .carouselSlides {
+                height: 100vh
+            }
+
+            .containerImage {
+                height: 40%;
+                background-color: #ffffffff
+            }
+
+            .carouselBtnNext,
+            .carouselBtnPrev {
+                border: none;
+                width: 60px
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 60px;
+                height: 60px
+            }
+
+            .informCard {
+                height: 60%;
+                background-color: #ffffffff
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 20px;
+                padding: 15px;
+                width: 100%;
+                height: 45%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px
+            }
+
+            .containerBtnClose {
+                height: 15%
+            }
+            
+        }
+
+        @media (min-width:426px) and (max-width:479px) {
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            #projects,
+            .carouselContainer {
+                padding: 0
+            }
+
+            #projects {
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            #containerProjects {
+                gap: 20px;
+                padding-bottom: 150px
+            }
+
+            .card {
+                box-shadow: -2px 2px 4px 4px rgba(0, 0, 0, .2)
+            }
+
+            .carouselSlides {
+                height: 100vh
+            }
+
+            .containerImage {
+                height: 40%;
+                background-color: #ffffffff
+            }
+
+            .carouselBtnNext,
+            .carouselBtnPrev {
+                border: none;
+                width: 60px
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 60px;
+                height: 60px
+            }
+
+            .informCard {
+                height: 60%;
+                background-color: #ffffffff
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 20px;
+                padding: 15px;
+                width: 100%;
+                height: 45%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px
+            }
+
+            .containerBtnClose {
+                height: 15%
+            }
+            .carouselBtnClose {
+                position: absolute; /* ou fixed, dependendo do seu caso */
+                top: 10px; /* ou qualquer valor que você deseje */
+                right: 10px; /* ou left, dependendo de onde você quer que ele fique */
+                /* border: 2px solid red; */
+            }
+            .reconnect{
+            /* background-color: rgb(153, 51, 53); */
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+            justify-content: start !important;
+            /* align-self: flex-start; */
+            gap: 0px;
+            font-size: 14px;
+            padding: 0px 20px !important;
+            text-align: center !important;
+            margin: 0px !important;
+        }
+        .reconnect p b{
+            /* background-color: rgb(49, 175, 89); */
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            align-self: flex-start;
+            font-size: 14px !important;
+            /* border: 2px solid rgb(26, 255, 0); */
+            /* width: 100px !important; */
+            height: 100%;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .descriptionReconnect{
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            align-self: center !important;
+            text-align: center !important;
+            font-weight: 800 !important;
+            /* border: 2px solid orange !important; */
+        }
+        .reconnect p{
+            /* background-color: rebeccapurple; */
+            display: flex;
+            flex-direction: column;
+            align-items: start !important;
+            justify-content: start !important;
+            align-self: flex-start !important;
+            font-size: 14px !important;
+            padding: 4px 0px !important;
+            /* border: 2px solid yellow; */
+            width: 100% !important;
+            margin: 0px !important;
+        }
+            
+        }
+
+        @media (min-width:414px) and (max-width:425px) {
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            #projects,
+            .carouselContainer {
+                padding: 0
+            }
+
+            #projects {
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            #containerProjects {
+                gap: 20px;
+                padding-bottom: 150px
+            }
+
+            .card {
+                box-shadow: -2px 2px 4px 4px rgba(0, 0, 0, .2)
+            }
+
+            .carouselSlides {
+                height: 100vh
+            }
+
+            .containerImage {
+                height: 40%;
+                background-color: #ffffffff
+            }
+
+            .carouselBtnNext,
+            .carouselBtnPrev {
+                border: none;
+                width: 60px
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 60px;
+                height: 60px
+            }
+
+            .informCard {
+                height: 60%;
+                background-color: #ffffffff
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 20px;
+                padding: 15px;
+                width: 100%;
+                height: 45%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px
+            }
+            .carouselBtnClose {
+                position: absolute; /* ou fixed, dependendo do seu caso */
+                top: 10px; /* ou qualquer valor que você deseje */
+                right: 10px; /* ou left, dependendo de onde você quer que ele fique */
+                /* border: 2px solid red; */
+            }
+            .reconnect{
+            /* background-color: rgb(153, 51, 53); */
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+            justify-content: start !important;
+            /* align-self: flex-start; */
+            gap: 0px;
+            font-size: 14px;
+            padding: 0px 20px !important;
+            text-align: center !important;
+            margin: 0px !important;
+        }
+        .reconnect p b{
+            /* background-color: rgb(49, 175, 89); */
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            align-self: flex-start;
+            font-size: 14px !important;
+            /* border: 2px solid rgb(26, 255, 0); */
+            /* width: 100px !important; */
+            height: 100%;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .descriptionReconnect{
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            align-self: center !important;
+            text-align: center !important;
+            font-weight: 800 !important;
+            /* border: 2px solid orange !important; */
+        }
+        .reconnect p{
+            /* background-color: rebeccapurple; */
+            display: flex;
+            flex-direction: column;
+            align-items: start !important;
+            justify-content: start !important;
+            align-self: flex-start !important;
+            font-size: 14px !important;
+            padding: 4px 0px !important;
+            /* border: 2px solid yellow; */
+            width: 100% !important;
+            margin: 0px !important;
+        }
+        }
+
+        @media (min-width:375px) and (max-width:413px) {
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            #projects,
+            .carouselContainer {
+                padding: 0
+            }
+
+            #projects {
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            #containerProjects {
+                gap: 20px;
+                padding-bottom: 150px
+            }
+
+            .card {
+                box-shadow: -2px 2px 4px 4px rgba(0, 0, 0, .2)
+            }
+
+            .carouselSlides {
+                height: 100vh
+            }
+
+            .containerImage {
+                height: 40%;
+                background-color: #ffffffff
+            }
+
+            .carouselBtnNext,
+            .carouselBtnPrev {
+                border: none;
+                width: 60px
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 60px;
+                height: 60px
+            }
+
+            .informCard {
+                height: 60%;
+                background-color: #ffffffff
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 20px;
+                padding: 15px;
+                width: 100%;
+                height: 45%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px
+            }
+
+            .containerBtnClose {
+                height: 15%
+            }
+            .carouselBtnClose {
+                position: absolute; /* ou fixed, dependendo do seu caso */
+                top: 10px; /* ou qualquer valor que você deseje */
+                right: 10px; /* ou left, dependendo de onde você quer que ele fique */
+                /* border: 2px solid red; */
+            }
+            .reconnect{
+            /* background-color: rgb(153, 51, 53); */
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+            justify-content: start !important;
+            /* align-self: flex-start; */
+            gap: 0px;
+            font-size: 14px;
+            padding: 0px 20px !important;
+            text-align: center !important;
+            margin: 0px !important;
+        }
+        .reconnect p b{
+            /* background-color: rgb(49, 175, 89); */
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            align-self: flex-start;
+            font-size: 14px !important;
+            /* border: 2px solid rgb(26, 255, 0); */
+            /* width: 100px !important; */
+            height: 100%;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .descriptionReconnect{
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            align-self: center !important;
+            text-align: center !important;
+            font-weight: 800 !important;
+            /* border: 2px solid orange !important; */
+        }
+        .reconnect p{
+            /* background-color: rebeccapurple; */
+            display: flex;
+            flex-direction: column;
+            align-items: start !important;
+            justify-content: start !important;
+            align-self: flex-start !important;
+            font-size: 14px !important;
+            padding: 4px 0px !important;
+            /* border: 2px solid yellow; */
+            width: 100% !important;
+            margin: 0px !important;
+        }
+        }
+
+        @media (min-width:360px) and (max-width:374px) {
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            #projects,
+            .carouselContainer {
+                padding: 0
+            }
+
+            #projects {
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            #containerProjects {
+                gap: 20px;
+                padding-bottom: 150px
+            }
+
+            .card {
+                box-shadow: -2px 2px 4px 4px rgba(0, 0, 0, .2)
+            }
+
+            .carouselSlides {
+                height: 100vh
+            }
+
+            .containerImage {
+                height: 30%;
+                background-color: #ffffffff
+            }
+
+            .carouselBtnNext,
+            .carouselBtnPrev {
+                border: none;
+                width: 60px
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 60px;
+                height: 60px
+            }
+
+            .informCard {
+                height: 70%;
+                background-color: #ffffffff
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 20px;
+                padding: 15px;
+                width: 100%;
+                height: 45%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px
+            }
+
+            .containerBtnClose {
+                height: 15%
+            }
+            .carouselBtnClose {
+                position: absolute; /* ou fixed, dependendo do seu caso */
+                top: 10px; /* ou qualquer valor que você deseje */
+                right: 10px; /* ou left, dependendo de onde você quer que ele fique */
+                /* border: 2px solid red; */
+            }
+            .reconnect{
+            /* background-color: rgb(153, 51, 53); */
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+            justify-content: start !important;
+            /* align-self: flex-start; */
+            gap: 0px;
+            font-size: 14px;
+            padding: 0px 20px !important;
+            text-align: center !important;
+            margin: 0px !important;
+        }
+        .reconnect p b{
+            /* background-color: rgb(49, 175, 89); */
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            align-self: flex-start;
+            font-size: 14px !important;
+            /* border: 2px solid rgb(26, 255, 0); */
+            /* width: 100px !important; */
+            height: 100%;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .descriptionReconnect{
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            align-self: center !important;
+            text-align: center !important;
+            font-weight: 800 !important;
+            /* border: 2px solid orange !important; */
+        }
+        .reconnect p{
+            /* background-color: rebeccapurple; */
+            display: flex;
+            flex-direction: column;
+            align-items: start !important;
+            justify-content: start !important;
+            align-self: flex-start !important;
+            font-size: 14px !important;
+            padding: 4px 0px !important;
+            /* border: 2px solid yellow; */
+            width: 100% !important;
+            margin: 0px !important;
+        }
+            
+        }
+
+        @media (max-width:359px) {
+
+            .card,
+            .contentCard {
+                width: 320px;
+                height: 320px
+            }
+
+            #projects,
+            .carouselContainer {
+                padding: 0
+            }
+
+            #projects {
+                clip-path: polygon(0 0, 100% 0, 100% 99%, 50% 100%, 0 99%)
+            }
+
+            #containerProjects {
+                gap: 20px;
+                padding-bottom: 150px
+            }
+
+            .card {
+                box-shadow: -2px 2px 4px 4px rgba(0, 0, 0, .2)
+            }
+
+            .carouselSlides {
+                height: 100vh
+            }
+
+            .containerImage {
+                height: 30%;
+                background-color: #ffffffff
+            }
+
+            .carouselBtnNext,
+            .carouselBtnPrev {
+                border: none;
+                width: 60px
+            }
+
+            .carouselBtnNext img,
+            .carouselBtnPrev img {
+                border: none;
+                width: 60px;
+                height: 60px
+            }
+
+            .informCard {
+                height: 70%;
+                background-color: #ffffffff
+            }
+
+            .informCard h1 {
+                font-size: 25px;
+                width: 90%;
+                height: 20%
+            }
+
+            .informCard p {
+                font-size: 20px;
+                padding: 15px;
+                width: 100%;
+                height: 45%
+            }
+
+            .slideLinks {
+                justify-content: space-around;
+                padding: 0;
+                height: 20%
+            }
+
+            .slideLinks a {
+                width: 150px
+            }
+
+            .containerBtnClose {
+                height: 15%
+            }
+            .carouselBtnClose {
+                position: absolute; /* ou fixed, dependendo do seu caso */
+                top: 10px; /* ou qualquer valor que você deseje */
+                right: 10px; /* ou left, dependendo de onde você quer que ele fique */
+                /* border: 2px solid red; */
+            }
+            .reconnect{
+            /* background-color: rgb(153, 51, 53); */
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+            justify-content: start !important;
+            /* align-self: flex-start; */
+            gap: 0px;
+            font-size: 14px;
+            padding: 0px 20px !important;
+            text-align: center !important;
+            margin: 0px !important;
+        }
+        .reconnect p b{
+            /* background-color: rgb(49, 175, 89); */
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            align-self: flex-start;
+            font-size: 14px !important;
+            /* border: 2px solid rgb(26, 255, 0); */
+            /* width: 100px !important; */
+            height: 100%;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .descriptionReconnect{
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            align-self: center !important;
+            text-align: center !important;
+            font-weight: 800 !important;
+            /* border: 2px solid orange !important; */
+        }
+        .reconnect p{
+            /* background-color: rebeccapurple; */
+            display: flex;
+            flex-direction: column;
+            align-items: start !important;
+            justify-content: start !important;
+            align-self: flex-start !important;
+            font-size: 14px !important;
+            padding: 4px 0px !important;
+            /* border: 2px solid yellow; */
+            width: 100% !important;
+            margin: 0px !important;
+        }
+        }
+
+        #contact {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center
+        }
+
+        #aboutMe,
+        .containerContact {
+            flex-direction: column;
+            display: flex
+        }
+
+        .titleContactLeft {
+            color: #d7f9ff;
+            font-size: 40px
+        }
+
+        #workMe {
+            font-size: 20px
+        }
+
+        .containerContact {
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+            justify-content: space-evenly;
+            color: #d7f9ff
+        }
+
+        .containerIcons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px
+        }
+
+        .containerIcons img:hover {
+            animation: .5s ease-out forwards iconContact
+        }
+
+        @keyframes iconContact {
+            50% {
+                padding: 0 5px 10px;
+                border-radius: 5px;
+                filter: drop-shadow(-5px 15px 1px #2bddfd79)
+            }
+        }
+
+        .emailPhoneContainer {
+            height: 100%;
+            width: 60%;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            justify-content: space-around
+        }
+
+        .iconSocialMediaContainer {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start
+        }
+
+        .containerContact p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #d7f9ff
+        }
+
+        .inconContact {
+            width: 2rem;
+            margin: 1rem
+        }
+
+        #download {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            gap: 9px;
+            background: linear-gradient(to bottom, #2bfdbe, #2bfdbe);
+            color: #232323;
+            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 50%, 90% 100%);
+            font-weight: 900;
+            height: 50px;
+            width: 250px;
+            font-size: 22px
+        }
+
+        #download::before {
+            content: "";
+            background: linear-gradient(to bottom, #2bddfd, #106f80);
+            display: block;
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            transition: transform .3s;
+            transform-origin: left;
+            transform: scaleX(0)
+        }
+
+        #download:hover::before {
+            transform-origin: left;
+            transform: scaleX(1)
+        }
+
+        #download img {
+            width: 22px
+        }
+
+        .copyright {
+            width: 100%;
+            padding: 25px 0;
+            background: #363636;
+            font-weight: 300;
+            margin-top: 20px
+        }
+
+        .copyright p {
+            color: #d3d3d3
+        }
+
+        #card1 {
+            background: url(../images/slides/proj-card-1.webp) center center/cover no-repeat
+        }
+
+        #card2 {
+            background: url(../images/slides/proj-card-2.webp) center center/cover no-repeat
+        }
+
+        #card3 {
+            background: url(../images/slides/proj-card-3.webp) center center/cover no-repeat
+        }
+
+        #card4 {
+            background: url(../images/slides/proj-card-4.webp) center center/cover no-repeat
+        }
+
+        #card5 {
+            background: url(../images/slides/proj-card-5.webp) center center/cover no-repeat
+        }
+
+        #card6 {
+            background: url(../images/slides/proj-card-6.webp) center center/cover no-repeat
+        }
+
+        #slide1-1 {
+            background-image: url(../images/slides/slide1-1.webp)
+        }
+
+        #slide1-2 {
+            background-image: url(../images/slides/slide1-2.webp)
+        }
+
+        #slide1-3 {
+            background-image: url(../images/slides/slide1-3.webp)
+        }
+
+        #slide2-1 {
+            background-image: url(../images/slides/slide2-1.webp)
+        }
+
+        #slide2-2 {
+            background-image: url(../images/slides/slide2-2.webp)
+        }
+
+        #slide2-3 {
+            background-image: url(../images/slides/slide2-3.webp)
+        }
+
+        #slide3-1 {
+            background-image: url(../images/slides/slide3-1.webp)
+        }
+
+        #slide3-2 {
+            background-image: url(../images/slides/slide3-2.webp)
+        }
+
+        #slide3-3 {
+            background-image: url(../images/slides/slide3-3.webp)
+        }
+
+        #slide4-1 {
+            background-image: url(../images/slides/slide4-1.webp)
+        }
+
+        #slide4-2 {
+            background-image: url(../images/slides/slide4-2.webp)
+        }
+
+        #slide4-3 {
+            background-image: url(../images/slides/slide4-3.webp)
+        }
+
+        #slide5-1 {
+            background-image: url(../images/slides/slide5-1.webp)
+        }
+
+        #slide5-2 {
+            background-image: url(../images/slides/slide5-2.webp)
+        }
+
+        #slide5-3 {
+            background-image: url(../images/slides/slide5-3.webp)
+        }
+
+        #slide6-1 {
+            background-image: url(../images/slides/slide6-1.webp)
+        }
+
+        #slide6-2 {
+            background-image: url(../images/slides/slide6-2.webp)
+        }
+
+        #slide6-3 {
+            background-image: url(../images/slides/slide6-3.webp)
+        }
+
+        @keyframes slide {
+            0% {
+                transform: scale(.5)
+            }
+
+            50% {
+                transform: scale(1.1)
+            }
+
+            100% {
+                transform: scale(1)
+            }
+        }
+
+        .iconWpp {
+            width: 90px;
+            bottom: 30px;
+            left: 10px;
+            font-size: 40px;
+            cursor: pointer;
+            animation: 2s ease-out infinite myMovieYoda
+        }
+
+        #containerYodaSMS:hover,
+        .iconWpp:hover {
+            opacity: 1;
+            scale: 1.1
+        }
+
+        .copyrightWppImg {
+            animation: 2s ease-out infinite myMovieYodaCP
+        }
+
+        .copyrightWppContainer {
+            bottom: 170px !important
+        }
+
+        #containerYodaSMS {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: space-between;
+            background-color: #faebd7;
+            width: 270px;
+            height: 50px;
+            bottom: 90px;
+            left: 25px;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 30% 75%, 25% 100%, 25% 75%, 0% 75%)
+        }
+
+        #yodaSMS {
+            font-size: 15px;
+            padding: 9px 2px 20px 15px;
+            color: #000
+        }
+
+        #closeYodaSMS {
+            display: flex;
+            cursor: pointer;
+            font-size: 25px;
+            font-weight: 800;
+            color: #000;
+            padding: 3px 9px 10px 0;
+            opacity: .5;
+            transform: translateY(-5px);
+
+        }
+
+        #closeYodaSMS:hover {
+            text-shadow: -2px 2px 2px rgba(0, 0, 0, .363);
+            color: #000;
+            opacity: 1
+        }
+
+        @keyframes myMovieYoda {
+
+            0%,
+            100% {
+                bottom: 10px
+            }
+
+            50% {
+                bottom: 0
+            }
+        }
+
+        @keyframes myMovieYodaCP {
+
+            0%,
+            100% {
+                bottom: 90px
+            }
+
+            50% {
+                bottom: 80px
+            }
+        }
+
+        @media (min-width:361px) and (max-width:600px) {
+            #myWork {
+                padding: 0;
+                gap: 0
+            }
+
+            #myWorkTitle {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                font-size: 30px
+            }
+
+            .containerPrinciples {
+                flex-direction: column;
+                padding: 30px 5px;
+                gap: 40px
+            }
+
+            .principles {
+                width: 100%;
+                gap: 10px
+            }
+
+            .principles img {
+                width: 70px
+            }
+
+            .principles h1 {
+                padding: 0;
+                font-size: 22px
+            }
+
+            .principles p {
+                width: 100%;
+                padding: 0;
+                font-size: 16px
+            }
+
+            .containerMyWork {
+                flex-direction: column
+            }
+
+            .myWorkLeft {
+                width: 100%;
+                align-items: center
+            }
+
+            .myWorkLeft img {
+                width: 80%;
+                height: 80%;
+                padding: 50px 0 0
+            }
+
+            .myWorkRight {
+                width: 100%;
+                height: 950px;
+                padding: 10px 5px
+            }
+
+            .containerRight {
+                padding: 0
+            }
+
+            .links {
+                font-size: 13px
+            }
+
+            .links::after {
+                height: 1px
+            }
+
+            .contentLinks ul li span {
+                font-size: 16px;
+                font-weight: 600
+            }
+
+            .contentLinks ul li {
+                text-align: center
+            }
+
+            #upArrow {
+                padding: 7px;
+                width: 30px;
+                height: 30px;
+                bottom: 10px;
+                right: 10px
+            }
+
+            .iconWpp {
+                width: 60px;
+                left: 2px
+            }
+
+            #containerYodaSMS {
+                width: 140px;
+                bottom: 60px;
+                left: 5px;
+                z-index: 2000
+            }
+
+            #yodaSMS {
+                font-size: 10px;
+                padding: 9px 2px 0 14px
+            }
+
+            #closeYodaSMS {
+                font-size: 15px
+            }
+            .carouselBtnClose {
+                position: absolute; /* ou fixed, dependendo do seu caso */
+                top: 10px; /* ou qualquer valor que você deseje */
+                right: 10px; /* ou left, dependendo de onde você quer que ele fique */
+                /* border: 2px solid red; */
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Poppins, sans-serif;
+            box-sizing: border-box;
+            outline: 0;
+            border: none;
+            text-decoration: none;
+            transition: .5s ease-out
+        }
+
+        body,
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background: #232323;
+            color: #d7f9ff;
+            overflow-x: hidden;
+            overflow: auto
+        }
+
+        #init {
+            opacity: 0;
+            width: 100%;
+            height: 0
+        }
+
+        [data-animate=toRight] {
+            transform: translate3d(-600px, 0, 0) scale(.1, 1);
+            transition: .3s
+        }
+
+        [data-animate=toLeft] {
+            transform: translate3d(600px, 0, 0) scale(.1, 1);
+            transition: .9s
+        }
+
+        [data-animate=toUp],
+        [data-animate].on {
+            transform: translate3d(0, 0, 0) scale(1, 1)
+        }
+
+        [data-animate=toUp] {
+            transition: .9s
+        }
+
+        [data-animate].on {
+            opacity: 1
+        }
+
+        @media (min-width:1367px) and (max-width:1920px) {
+            [data-animate=toRight] {
+                transform: translate3d(-600px, 0, 0) scale(.1, 1)
+            }
+
+            [data-animate=toLeft] {
+                transform: translate3d(600px, 0, 0) scale(.1, 1)
+            }
+        }
+
+        @media (min-width:1200px) and (max-width:1366px) {
+            [data-animate=toRight] {
+                transform: translate3d(-530px, 0, 0) scale(.1, 1)
+            }
+
+            [data-animate=toLeft] {
+                transform: translate3d(530px, 0, 0) scale(.1, 1)
+            }
+        }
+
+        @media (min-width:992px) and (max-width:1199px) {
+            [data-animate=toRight] {
+                transform: translate3d(-440px, 0, 0) scale(.1, 1)
+            }
+
+            [data-animate=toLeft] {
+                transform: translate3d(440px, 0, 0) scale(.1, 1)
+            }
+        }
+
+        #aboutMe {
+            clip-path: polygon(100% 0, 100% 95%, 49% 95%, 46% 100%, 0 100%, 0% 0%);
+            background-image: url(../images/background/background.webp);
+            background-attachment: fixed;
+            background-size: cover;
+            justify-content: center;
+            width: 100%;
+            height: 105vh
+        }
+
+        .aboutMeContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 100px 40px;
+            height: 80vh;
+            gap: 30px;
+            font-size: 30px;
+            animation: 4s forwards fadeInAnimation
+        }
+
+        .iconSocialMedia {
+            margin: 10px
+        }
+
+        .aboutMeTitle {
+            font-size: 80px;
+            font-weight: 600;
+            color: #d7f9ff
+        }
+
+        #description {
+            font-size: 30px;
+            text-align: justify;
+            width: 50%;
+            height: 100%;
+            color: #d7f9ff
+        }
+
+        #description::after {
+            content: "|";
+            margin-left: 5px;
+            opacity: 1;
+            animation: .7s infinite blink
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: 0
+            }
+        }
+
+        .iconSocialMedia a img {
+            width: 40px;
+            margin: 0 10px
+        }
+
+        .iconSocialMedia a img:hover {
+            animation: .3s ease-out forwards icon
+        }
+
+        @keyframes icon {
+            50% {
+                padding: 0 5px 10px;
+                border-radius: 5px;
+                filter: drop-shadow(-5px 15px 2px #2bddfd79)
+            }
+        }
+
+        @media (min-width:1367px) and (max-width:1800px) {
+            #aboutMe {
+                clip-path: polygon(100% 0, 100% 98%, 49% 98%, 46% 100%, 0 100%, 0% 0%)
+            }
+
+            .aboutMeContainer {
+                font-size: 10px;
+                padding: 100px 50px
+            }
+
+            .aboutMeTitle {
+                font-size: 52px
+            }
+
+            #description {
+                font-size: 20px
+            }
+        }
+
+        @media (min-width:1200px) and (max-width:1366px) {
+            #aboutMe {
+                clip-path: polygon(100% 0, 100% 98%, 49% 98%, 46% 100%, 0 100%, 0% 0%)
+            }
+
+            .aboutMeContainer {
+                font-size: 10px;
+                padding: 100px 50px
+            }
+
+            .aboutMeTitle {
+                font-size: 52px
+            }
+
+            #description {
+                font-size: 20px
+            }
+        }
+
+        @media (min-width:992px) and (max-width:1199px) {
+            #aboutMe {
+                background-image: url(../images/background/background1.webp);
+                clip-path: polygon(100% 0, 100% 98%, 49% 98%, 46% 100%, 0 100%, 0% 0%)
+            }
+
+            .aboutMeContainer {
+                font-size: 10px;
+                padding: 100px 50px
+            }
+
+            .aboutMeTitle {
+                font-size: 52px
+            }
+
+            #description {
+                font-size: 20px
+            }
+        }
+
+        @media (min-width:850px) and (max-width:991px) {
+            #aboutMe {
+                background-image: url(../images/background/backgroundPhone3.webp);
+                clip-path: polygon(100% 0, 100% 98%, 49% 98%, 46% 100%, 0 100%, 0% 0%)
+            }
+
+            .aboutMeContainer {
+                font-size: 10px;
+                align-items: center;
+                justify-content: space-around !important;
+                height: 100%;
+                padding: 60px 50px
+            }
+
+            .aboutMeTitle {
+                font-size: 62px;
+                text-align: center
+            }
+
+            #description {
+                font-size: 30px;
+                width: 90%
+            }
+
+            .iconSocialMedia {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 0;
+                margin-left: 0
+            }
+
+            .iconSocialMedia a img {
+                margin: 9px
+            }
+        }
+
+        @media (min-width:601px) and (max-width:850px) {
+            #aboutMe {
+                background-image: url(../images/background/backgroundPhone2.webp);
+                clip-path: polygon(100% 0, 100% 98%, 49% 98%, 46% 100%, 0 100%, 0% 0%)
+            }
+
+            .aboutMeContainer {
+                font-size: 10px;
+                align-items: center;
+                justify-content: space-around !important;
+                height: 100%;
+                padding: 60px 50px
+            }
+
+            .aboutMeTitle {
+                font-size: 52px;
+                text-align: center
+            }
+
+            #description {
+                font-size: 20px;
+                width: 100%
+            }
+
+            .iconSocialMedia {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 0;
+                margin-left: 0
+            }
+
+            .iconSocialMedia a img {
+                width: 30px;
+                margin: 9px
+            }
+        }
+
+        #canvas {
+            z-index: 5000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: crosshair
+        }
+
+        #h1Animation {
+            top: 20%;
+            position: absolute;
+            gap: 4rem;
+            font-size: 60px;
+            width: 100%
+        }
+
+        #ViewMyWork,
+        .navbar a {
+            font-family: "Chakra Petch", sans-serif;
+            font-size: 30px
+        }
+
+        #ViewMyWork {
+            border: 2px solid #fff;
+            top: 45%;
+            color: #fff;
+            padding: 10px 20px;
+            width: 500px;
+            height: auto;
+            position: absolute;
+            cursor: pointer
+        }
+
+        #ViewMyWork:hover {
+            color: #fff;
+            background-color: #2bdefd;
+            border: 2px solid #2bdefd
+        }
+
+        @media (min-width:4097px) and (max-width:6400px) {
+            #h1Animation {
+                top: 400px;
+                font-size: 120px;
+                left: 500px
+            }
+
+            #ViewMyWork {
+                left: 500px;
+                top: 900px;
+                width: 600px;
+                font-size: 40px;
+                height: 90px
+            }
+        }
+
+        @media (min-width:3200px) and (max-width:4096px) {
+            #h1Animation {
+                top: 400px;
+                font-size: 90px;
+                left: 500px
+            }
+
+            #ViewMyWork {
+                left: 500px;
+                top: 700px;
+                width: 500px;
+                font-size: 30px;
+                height: 80px
+            }
+        }
+
+        @media (min-width:1367px) and (max-width:1920px) {
+
+            #canvas,
+            #introduction {
+                width: 100%;
+                height: 100vh
+            }
+
+            #h1Animation {
+                top: 200px;
+                left: 200px;
+                padding: 0;
+                font-size: 40px;
+                margin: 0;
+                width: 80%
+            }
+
+            #introduction {
+                display: flex;
+                justify-content: center;
+                padding: 0;
+                margin: 0
+            }
+
+            #ViewMyWork {
+                top: 340px;
+                left: 200px;
+                width: 400px;
+                font-size: 15px;
+                height: 45px
+            }
+            .aboutMeTitle{
+                font-size: 60px;
+            }
+            #description{
+                font-size: 25px;
+            }
+            .btnNavbar{
+                font-size: 16px !important;
+            }
+            .inconContact{
+                width: 30px !important;
+            }
+            
+            #upArrow {
+                padding: 7px;
+                width: 30px;
+                height: 30px;
+                bottom: 10px;
+                right: 10px
+            }
+            footer{
+                height: 40px;
+                padding: 0px;
+                margin: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .copyright{
+                margin: 0px;
+                padding: 0px;
+            }
+            
+        }
+
+        @media (min-width:1200px) and (max-width:1366px) {
+
+            #ancorIntroduction,
+            #h1Animation {
+                left: 100px;
+                width: 80%;
+                padding: 0;
+                margin: 0
+            }
+
+            #ancorIntroduction,
+            #introduction {
+                height: 100vh;
+                display: flex;
+                padding: 0;
+                margin: 0
+            }
+
+            #canvas {
+                width: 100%;
+                height: 100vh
+            }
+
+            #h1Animation {
+                top: 100px;
+                font-size: 40px;
+                text-align: start
+            }
+
+            #introduction {
+                justify-content: center;
+                width: 100%
+            }
+
+            #ancorIntroduction {
+                top: 240px;
+                justify-content: start;
+                text-align: center;
+                position: absolute
+            }
+
+            #ViewMyWork {
+                top: 0;
+                left: 0;
+                width: 300px;
+                font-size: 20px;
+                position: relative;
+                height: 50px
+            }
+        }
+
+        @media (min-width:992px) and (max-width:1199px) {
+
+            #ancorIntroduction,
+            #h1Animation {
+                left: 80px;
+                width: 80%;
+                padding: 0;
+                margin: 0
+            }
+
+            #ancorIntroduction,
+            #introduction {
+                height: 100vh;
+                display: flex;
+                padding: 0;
+                margin: 0
+            }
+
+            #canvas {
+                width: 100%;
+                height: 100vh
+            }
+
+            #h1Animation {
+                top: 80px;
+                font-size: 40px
+            }
+
+            #introduction {
+                justify-content: center;
+                width: 100%
+            }
+
+            #ancorIntroduction {
+                top: 200px;
+                text-align: center;
+                position: absolute
+            }
+
+            #ViewMyWork {
+                top: 0;
+                left: 0;
+                width: 270px;
+                font-size: 20px;
+                position: relative;
+                height: 50px
+            }
+        }
+
+        @media (min-width:768px) and (max-width:991px) {
+            [data-animate=toRight] {
+                transform: translate3d(-340px, 0, 0) scale(.1, 1)
+            }
+
+            [data-animate=toLeft] {
+                transform: translate3d(340px, 0, 0) scale(.1, 1)
+            }
+
+            #ancorIntroduction,
+            #introduction {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                padding: 0;
+                margin: 0
+            }
+
+            #canvas {
+                width: 100%;
+                height: 100vh
+            }
+
+            #h1Animation {
+                top: 200px;
+                left: 0;
+                font-size: 55px;
+                text-align: center;
+                padding: 20px;
+                margin: 0;
+                width: 100%
+            }
+
+            #introduction {
+                justify-content: center
+            }
+
+            #ancorIntroduction {
+                top: 500px;
+                justify-content: center;
+                text-align: center;
+                position: absolute
+            }
+
+            #ViewMyWork {
+                top: 0;
+                left: 0;
+                width: 380px;
+                font-size: 25px;
+                position: relative;
+                height: 50px
+            }
+        }
+
+        @media (min-width:601px) and (max-width:767px) {
+            [data-animate=toRight] {
+                transform: translate3d(-260px, 0, 0) scale(.1, 1)
+            }
+
+            [data-animate=toLeft] {
+                transform: translate3d(260px, 0, 0) scale(.1, 1)
+            }
+
+            #ancorIntroduction,
+            #introduction {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                padding: 0;
+                margin: 0
+            }
+
+            #canvas {
+                width: 100%;
+                height: 100vh
+            }
+
+            #h1Animation {
+                top: 200px;
+                left: 0;
+                font-size: 40px;
+                text-align: center;
+                padding: 20px;
+                margin: 0;
+                width: 100%
+            }
+
+            #introduction {
+                justify-content: center
+            }
+
+            #ancorIntroduction {
+                top: 500px;
+                justify-content: center;
+                text-align: center;
+                position: absolute
+            }
+
+            #ViewMyWork {
+                top: 0;
+                left: 0;
+                width: 300px;
+                height: 50px;
+                font-size: 20px;
+                position: relative
+            }
+        }
+
+        #navbarDesktop,
+        .navbar {
+            top: 0;
+            width: 100%;
+            display: flex
+        }
+
+        #navbarDesktop {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 90000 !important;
+            height: 50px;
+            padding: 0 500px 0 40px;
+            background: linear-gradient(to bottom, #000000ff, #000000ff, #222222df);
+            overflow: hidden
+        }
+
+        #navbarDesktop img {
+            width: 220px
+        }
+
+        .btnNavbar {
+            font-size: 22px;
+            margin: 0 20px;
+            padding: 5px 20px;
+            color: #fff;
+            transition: .3s
+        }
+
+        .btnNavbar:hover,
+        .navbar a:hover {
+            color: #7b71ff
+        }
+
+        .fixed-navbar {
+            position: fixed !important;
+            z-index: 5000
+        }
+
+        .relative-navbar {
+            position: relative !important
+        }
+
+        .slideOn {
+            transform: translate3d(0, -100px, 0)
+        }
+
+        #menuBtn {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            height: 70px;
+            width: 70px;
+            line-height: 70px;
+            border-radius: 50%;
+            font-size: 40px;
+            cursor: pointer;
+            background: #ff8d2a;
+            color: #d7f9ff;
+            z-index: 1000
+        }
+
+        #menuBtn.open {
+            transform: rotate(180deg);
+            background: #2bfdbe;
+            color: #000
+        }
+
+        .navbar {
+            text-transform: uppercase;
+            position: fixed;
+            left: 0;
+            z-index: 999;
+            height: 100%;
+            background: linear-gradient(to bottom, #01080e55, #03152555, #3a3c3d55);
+            backdrop-filter: blur(15px);
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+            padding-bottom: 50px;
+            clip-path: circle(0% at 95.3% 8.5%)
+        }
+
+        .overflowOn {
+            overflow: auto
+        }
+
+        .overflowOff {
+            overflow: hidden
+        }
+
+        .navbar.active {
+            clip-path: circle(140% at 95.3% 8.5%)
+        }
+
+        .navbar.desactive {
+            clip-path: circle(0% at 95.3% 8.5%)
+        }
+
+        .navbar a {
+            padding-bottom: 30px;
+            color: #2bdefd
+        }
+
+        .navbar a::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5em;
+            color: #2bdefd;
+            pointer-events: none;
+            font-weight: bolder;
+            letter-spacing: .4em;
+            opacity: 0;
+            z-index: -1
+        }
+
+        .navbar a:hover::before {
+            letter-spacing: 0;
+            opacity: .3;
+            transition: .9s ease-out
+        }
+
+        .navDisplayOff {
+            display: none
+        }
+
+        @media (min-width:1367px) and (max-width:1800px) {
+            #navbarDesktop {
+                justify-content: space-evenly;
+                padding: 0 0 0 10px
+            }
+
+            #navbarDesktop img {
+                width: 150px;
+                margin: 0 40px 0 80px
+            }
+
+            #navbarDesktop div {
+                width: 100%;
+                gap: 0;
+                padding-left: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center
+            }
+
+            .btnNavbar {
+                width: 150px;
+                height: 100%;
+                font-size: 20px;
+                margin: 0;
+                padding: 10px 0
+            }
+        }
+
+        @media (min-width:1200px) and (max-width:1366px) {
+            #navbarDesktop {
+                justify-content: space-evenly;
+                padding: 0 0 0 10px
+            }
+
+            #navbarDesktop img {
+                width: 150px;
+                margin: 0 40px 0 20px
+            }
+
+            #navbarDesktop div {
+                width: 100%;
+                gap: 0;
+                padding-left: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 40px
+            }
+
+            .btnNavbar {
+                width: 150px;
+                height: 100%;
+                font-size: 20px;
+                margin: 0;
+                padding: 10px 0
+            }
+        }
+
+        @media (min-width:992px) and (max-width:1199px) {
+            #navbarDesktop {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                text-align: center;
+                width: 100%;
+                height: 60px;
+                padding: 0 0 0 10px;
+                top: 0
+            }
+
+            #navbarDesktop img {
+                width: 150px;
+                margin: 0 40px 0 0
+            }
+
+            #navbarDesktop div {
+                width: 100%;
+                gap: 20px;
+                padding-left: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center
+            }
+
+            .btnNavbar {
+                width: 150px;
+                height: 100%;
+                font-size: 20px;
+                margin: 0;
+                padding: 10px 0
+            }
+        }
+
+        @media (min-width:601px) and (max-width:991px) {
+            #navbarDesktop {
+                justify-content: space-evenly;
+                height: 40px;
+                padding: 0 0 0 10px
+            }
+
+            #navbarDesktop img {
+                width: 120px;
+                margin: 0 40px 0 0
+            }
+
+            #navbarDesktop div {
+                width: 100%;
+                gap: 0;
+                padding-left: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 20px
+            }
+
+            .btnNavbar {
+                width: 100px;
+                height: 100%;
+                font-size: 16px;
+                margin: 0;
+                padding: 10px 0
+            }
+        }
+
+        @media (min-width:481px) and (max-width:600px) {
+            #contact {
+                height: 90vh
+            }
+
+            .titleContactLeft {
+                font-size: 30px
+            }
+
+            #workMe {
+                font-size: 16px
+            }
+
+            .containerContact {
+                width: 100%;
+                height: 70vh
+            }
+
+            .containerIcons {
+                flex-direction: column;
+                width: 100%
+            }
+
+            .emailPhoneContainer {
+                width: 100%;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: center
+            }
+
+            [data-animate=toRight] {
+                transform: translate3d(-210px, 0, 0) scale(.1, 1)
+            }
+
+            [data-animate=toLeft] {
+                transform: translate3d(210px, 0, 0) scale(.1, 1)
+            }
+
+            #aboutMe {
+                background-image: url(../images/background/backgroundPhone2.webp);
+                clip-path: polygon(100% 0, 100% 98%, 49% 98%, 46% 100%, 0 100%, 0% 0%)
+            }
+
+            .aboutMeContainer {
+                padding: 5px;
+                font-size: 10px
+            }
+
+            .iconSocialMedia {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 280px;
+                margin-left: 0
+            }
+
+            .aboutMeTitle {
+                font-size: 52px;
+                text-align: center
+            }
+
+            #description {
+                font-size: 20px;
+                text-align: center;
+                width: 100%
+            }
+
+            .iconSocialMedia a img {
+                width: 30px;
+                margin: 9px
+            }
+
+            #ancorIntroduction,
+            #introduction {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                padding: 0;
+                margin: 0
+            }
+
+            #canvas {
+                width: 100%;
+                height: 100vh
+            }
+
+            #h1Animation {
+                top: 200px;
+                left: 0;
+                font-size: 40px;
+                text-align: center;
+                padding: 20px;
+                margin: 0;
+                width: 100%
+            }
+
+            #introduction {
+                justify-content: center
+            }
+
+            #ancorIntroduction {
+                top: 500px;
+                justify-content: center;
+                text-align: center;
+                position: absolute
+            }
+
+            #ViewMyWork {
+                top: 0;
+                left: 0;
+                width: 250px;
+                height: 50px;
+                font-size: 15px;
+                position: relative
+            }
+
+            #navbarDesktop {
+                justify-content: space-evenly;
+                height: 40px;
+                padding: 0 0 0 10px
+            }
+
+            #navbarDesktop img {
+                width: 80px
+            }
+
+            #navbarDesktop div {
+                width: 100%;
+                gap: 20px;
+                padding-left: 20px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center
+            }
+
+            .btnNavbar {
+                width: 100%;
+                height: 100%;
+                font-size: 12px;
+                margin: 0;
+                padding: 0
+            }
+        }
+
+        @media (min-width:361px) and (max-width:480px) {
+            #contact {
+                height: 90vh
+            }
+
+            .titleContactLeft {
+                font-size: 30px
+            }
+
+            #workMe {
+                font-size: 16px
+            }
+
+            .containerContact {
+                width: 100%;
+                height: 70vh
+            }
+
+            .containerIcons {
+                flex-direction: column;
+                width: 100%
+            }
+
+            .emailPhoneContainer {
+                width: 100%;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 30px 0 0
+            }
+
+            [data-animate=toRight] {
+                transform: translate3d(-155px, 0, 0) scale(.1, 1)
+            }
+
+            [data-animate=toLeft] {
+                transform: translate3d(155px, 0, 0) scale(.1, 1)
+            }
+
+            #aboutMe {
+                background-image: url(../images/background/backgroundPhone1.webp);
+                clip-path: polygon(100% 0, 100% 98%, 49% 98%, 46% 100%, 0 100%, 0% 0%)
+            }
+
+            .aboutMeContainer {
+                padding: 5px;
+                font-size: 10px
+            }
+
+            .iconSocialMedia {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 280px;
+                margin-left: 0
+            }
+
+            .aboutMeTitle {
+                font-size: 52px;
+                text-align: center
+            }
+
+            #description {
+                font-size: 20px;
+                text-align: center;
+                width: 100%
+            }
+
+            .iconSocialMedia a img {
+                width: 30px;
+                margin: 9px
+            }
+
+            #ancorIntroduction,
+            #canvas,
+            #introduction {
+                width: 100%;
+                height: 100vh;
+                padding: 0;
+                margin: 0
+            }
+
+            #h1Animation {
+                top: 200px;
+                left: 0;
+                font-size: 30px;
+                text-align: center;
+                padding: 20px
+            }
+
+            #introduction {
+                display: flex;
+                justify-content: center
+            }
+
+            #ancorIntroduction {
+                top: 500px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                position: absolute
+            }
+
+            #ViewMyWork {
+                top: 0;
+                left: 0;
+                width: 250px;
+                height: 50px;
+                font-size: 15px;
+                position: relative
+            }
+
+            #navbarDesktop {
+                display: none
+            }
+
+            #menuBtn {
+                display: block;
+                top: 10px;
+                right: 10px;
+                font-size: 20px;
+                width: 40px;
+                height: 40px;
+                line-height: 40px
+            }
+
+            .navbar a:hover::before {
+                font-size: 45px;
+                text-wrap: nowrap
+            }
+
+            .navbar a::before {
+                top: 44%;
+                left: 50%
+            }
+
+            body {
+                overflow: hidden
+            }
+        }
+
+        @media (max-width:360px) {
+            #myWork {
+                padding: 0;
+                gap: 0
+            }
+
+            #myWorkTitle {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                font-size: 30px
+            }
+
+            .containerPrinciples {
+                flex-direction: column;
+                padding: 30px 5px;
+                gap: 40px
+            }
+
+            .principles {
+                width: 100%;
+                gap: 10px
+            }
+
+            .principles img {
+                width: 70px
+            }
+
+            .principles h1 {
+                padding: 0;
+                font-size: 22px
+            }
+
+            .principles p {
+                width: 100%;
+                padding: 0;
+                font-size: 16px
+            }
+
+            .containerMyWork {
+                flex-direction: column;
+                align-items: center
+            }
+
+            #canvas,
+            #introduction,
+            .myWorkLeft {
+                width: 100%
+            }
+
+            .myWorkLeft img {
+                width: 80%;
+                height: 80%;
+                padding: 100px 0 10px
+            }
+
+            .myWorkRight {
+                width: 100%;
+                height: 900px;
+                padding: 10px 5px
+            }
+
+            .containerRight {
+                padding: 0
+            }
+
+            .links {
+                font-size: 13px
+            }
+
+            .links::after {
+                height: 1px
+            }
+
+            .contentLinks ul li span {
+                font-size: 16px;
+                font-weight: 600
+            }
+
+            .contentLinks ul li {
+                font-size: 18px;
+                text-align: center
+            }
+
+            #upArrow {
+                padding: 7px;
+                width: 30px;
+                height: 30px;
+                bottom: 10px;
+                right: 10px
+            }
+
+            #contact {
+                height: 90vh
+            }
+
+            .titleContactLeft {
+                font-size: 30px
+            }
+
+            #workMe {
+                font-size: 16px
+            }
+
+            .containerContact {
+                width: 100%;
+                height: 70vh
+            }
+
+            .containerIcons {
+                flex-direction: column;
+                width: 100%
+            }
+
+            .emailPhoneContainer {
+                width: 100%;
+                flex-direction: column;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 30px 0 0
+            }
+
+            .iconWpp {
+                width: 60px;
+                left: 2px
+            }
+
+            #containerYodaSMS {
+                width: 140px;
+                bottom: 60px;
+                left: 5px;
+                z-index: 2000;
+                
+            }
+
+            #yodaSMS {
+                font-size: 10px;
+                padding: 9px 2px 0 14px
+            }
+
+            #closeYodaSMS {
+                font-size: 15px
+            }
+
+            [data-animate=toRight] {
+                transform: translate3d(-155px, 0, 0) scale(.1, 1)
+            }
+
+            [data-animate=toLeft] {
+                transform: translate3d(155px, 0, 0) scale(.1, 1)
+            }
+
+            #aboutMe {
+                background-image: url(../images/background/backgroundPhone1.webp);
+                clip-path: polygon(100% 0, 100% 98%, 49% 98%, 46% 100%, 0 100%, 0% 0%)
+            }
+
+            .aboutMeContainer {
+                padding: 5px;
+                font-size: 10px;
+                height: 100%
+            }
+
+            .iconSocialMedia {
+                width: 100%;
+                height: 100px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 280px;
+                margin-left: 0
+            }
+
+            .aboutMeTitle {
+                font-size: 52px;
+                text-align: center;
+                height: 200px
+            }
+
+            #description {
+                font-size: 20px;
+                text-align: center;
+                width: 100%
+            }
+
+            .iconSocialMedia a img {
+                width: 30px;
+                margin: 9px
+            }
+
+            #canvas {
+                height: 100vh
+            }
+
+            #h1Animation {
+                top: 200px;
+                left: 0;
+                padding: 0;
+                font-size: 30px;
+                text-align: center
+            }
+
+            #ViewMyWork {
+                top: 400px;
+                left: 3.4rem;
+                width: 250px;
+                font-size: 15px
+            }
+
+            #navbarDesktop {
+                display: none
+            }
+
+            #menuBtn {
+                display: block;
+                top: 10px;
+                right: 10px;
+                font-size: 20px;
+                width: 40px;
+                height: 40px;
+                line-height: 40px
+            }
+
+            .navbar a:hover::before {
+                font-size: 45px;
+                text-wrap: nowrap
+            }
+
+            .navbar a::before {
+                top: 44%;
+                left: 50%
+            }
+
+            body {
+                overflow: hidden
+            }
+            .reconnect{
+            /* background-color: rgb(153, 51, 53); */
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+            justify-content: start !important;
+            /* align-self: flex-start; */
+            gap: 0px;
+            font-size: 14px;
+            padding: 0px 20px !important;
+            text-align: center !important;
+            margin: 0px !important;
+        }
+        .reconnect p b{
+            /* background-color: rgb(49, 175, 89); */
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            align-self: flex-start;
+            font-size: 14px !important;
+            /* border: 2px solid rgb(26, 255, 0); */
+            /* width: 100px !important; */
+            height: 100%;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .descriptionReconnect{
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            align-self: center !important;
+            text-align: center !important;
+            font-weight: 800 !important;
+            /* border: 2px solid orange !important; */
+        }
+        .reconnect p{
+            /* background-color: rebeccapurple; */
+            display: flex;
+            flex-direction: row;
+            align-items: start !important;
+            justify-content: start !important;
+            align-self: flex-start !important;
+            font-size: 14px !important;
+            padding: 4px 0px !important;
+            /* border: 2px solid yellow; */
+            width: 100% !important;
+            margin: 0px !important;
+        }
+        .carouselBtnClose {
+             transform: translateY(-100%);
+        }
+
+        }
+    </style>
+    <title>Welligthon Paluchowski</title>
+</head>
+
+<body>
+    <header id="header">
+        <div id="introduction">
+            <canvas id="canvas" width="100%" height="500px"></canvas>
+
+
+            <h1 id="h1Animation">Oi, sou<span> Welligthon Paluchowski</span><br>Desenvolvedor Full Stack</h1><a
+                href="#init" id="ancorIntroduction"><button id="ViewMyWork">VEJA O MEU TRABALHO</button></a>
+        </div>
+        <div id="init"></div>
+        <nav id="navbarDesktop"><img src="./images/logo.webp">
+            <div><a href="#init" class="btnNavbar">Sobre mim</a><a href="#myWorkTitle" class="btnNavbar">Meu
+                    trabalho</a><a href="#projectsTitle" class="btnNavbar">Projetos</a><a href="#contact"
+                    class="btnNavbar">Contato</a></div>
+        </nav>
+        <div id="iconWpp">
+            <div id="containerYodaSMS"><a
+                    href="https://wa.me/48988240117?text=Olá Wellighon, estou entrando em contato através do seu portfólio!"
+                    target="_blank">
+                    <p id="yodaSMS">Mandar mensagem você deve!</p>
+                </a>
+                <p id="closeYodaSMS">x</p>
+            </div><a
+                href="https://wa.me/48988240117?text=Olá Wellighon, estou entrando em contato através do seu portfólio!"
+                target="_blank"><img src="./images/icon-wpp.webp" alt="icon-wpp.webp" class="iconWpp"></a>
+        </div>
+        <div id="menuBtn" class="fas fa-bars"></div>
+        <nav class="navbar" id="nav-bar"><a href="#init" data-text="Sobre mim" class="linkNavbarMobile">Sobre mim</a><a
+                href="#myWorkTitle" data-text="Meu trabalho" class="linkNavbarMobile">Meu trabalho</a><a
+                href="#projectsTitle" data-text="projetos" class="linkNavbarMobile">Projetos</a><a href="#contact"
+                data-text="contato" class="linkNavbarMobile">contato</a></nav>
+        <div id="aboutMe">
+            <div class="aboutMeContainer">
+                <h1 class="aboutMeTitle" data-animate="toRight">Sobre mim</h1>
+                <p id="description" data-animate="toUP">Estou conectado com a tecnologia desde a infância, tenho uma
+                    grande paixão por efeitos de UI, animações e pela criação de experiências de usuário intuitivas e
+                    dinâmicas</p>
+                <div class="iconSocialMedia" data-animate="toRight"><a
+                        href="https://www.linkedin.com/in/welligthon-paluchowski/" target="_blank"><img
+                            src="./images/icons/linkedin.webp" alt="LinkedIn" class="inconContact"></a><a
+                        href="https://www.instagram.com/well_ligth_on/" target="_blank"><img
+                            src="./images/icons/instagram.webp" alt="Instagram" class="inconContact"></a><a
+                        href="https://github.com/WelligthonDarlan" target="_blank"><img
+                            src="./images/icons/square-github.webp" alt="Github" class="inconContact"></a></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="myWork" class="fadeInScroll"><a href="#init"><img id="upArrow" src="./images/up-arrow.webp"
+                    alt="up-arrow.webp"></a>
+            <h1 id="myWorkTitle" data-animate="toRight">MEU TRABALHO</h1>
+            <div class="containerPrinciples" data-animate="toLeft">
+                <div class="principles"><img src="./images/intuitive.webp" alt="intuitive.webp">
+                    <h1>Intuitivo</h1>
+                    <p>Busco desenvolver sites intuitivos e fáceis de usar.</p>
+                </div>
+                <div class="principles"><img src="./images/dynamic.webp" alt="dynamic.webp">
+                    <h1>Dinâmico</h1>
+                    <p>Os sites não precisam ser estáticos, adoro dar vida às páginas.</p>
+                </div>
+                <div class="principles"><img src="./images/responsive.webp" alt="responsive.webp">
+                    <h1>Responsivo</h1>
+                    <p>Meus layouts funcionarão em qualquer dispositivo, grande ou pequeno.</p>
+                </div>
+            </div>
+            <div class="containerMyWork" data-animate="toRight">
+                <div class="myWorkLeft"><img src="./images/user.webp"></div>
+                <div class="myWorkRight">
+                    <div class="containerRight">
+                        <div class="containerLinks">
+                            <p class="links active-link" onclick='openTab("skills")'>HABILIDADES</p>
+                            <p class="links" onclick='openTab("experience")'>EXPERIÊNCIA</p>
+                            <p class="links" onclick='openTab("education")'>EDUCAÇÃO</p>
+                        </div>
+                        <div class="contentLinks active-tab" id="skills">
+                            <ul>
+                                <li><span>HTML / CSS / Javascript / Bootstrap / React / SQL / Web Scraping / TypeScript /
+                                        NodeJS</span><br>&nbsp;Terminei os cursos de desenvolvedor FullStack na
+                                    OneBitCode, e tenho muita pratica no desenvolvimento de páginas Web com Javascript
+                                    e React, Estou trabalhando em um projeto Full stack na empresa onde trabalho.</li>
+                                <li><span>Git / GitHub / GitLab / Linux / windows</span><br>&nbsp;Embora seja básico,
+                                    acredito que seja importante mencionar que tenho experiencia com versionadores,
+                                    plataforma de hospedagem de código e com alguns sistemas operacionais.</li>
+                                <li><span>Animação 2D e 3D</span><br>&nbsp;Desenvolvi habilidades com diversos software
+                                    de animação, como por exemplo: Adobe Animate cc e Autodesk Maya.</li>
+                                <li><span>Edição de audio, video e imagem</span><br>&nbsp;Tenho experiência de edição de
+                                    imagem, video e audio, com Lightroom, Photoshop, Vegas Pro...</li>
+                                <li><span>Atendimento</span><br>&nbsp;Tenho vasta experiência com atendimento ao
+                                    publico, trabalhei com vendas, pós-vendas, e negociações.</li>
+                            </ul>
+                        </div>
+                        <div class="contentLinks" id="experience">
+                            <ul>
+                                <li><span>2024 - Trabalho Mercado livre</span><br>&nbsp;Atualmente, estou me dedicando a um projeto na empresa onde trabalho. 
+                                    Sou responsável pelo desenvolvimento do site de gerenciamento de estoque e pela administração do estoque das lojas. 
+                                    Mais detalhes sobre este projeto podem ser encontrados em <a id="chanel" href="#projects"
+                                    >meus projetos</a>
+                                </li>
+                                <li><span>2022 - 2023 - Estudo e desenvolvimento Web</span><br>&nbsp;Atualmente venho
+                                    desenvolvendo inúmeros projetos para amplificar minhas habilidades em Javascript.
+                                </li>
+                                <li><span>2020 - 2023 - Gerenciamento de estoque</span><br>&nbsp;Trabalhei na
+                                    administração e gerenciamento de estoque na TokStok, onde aprendi muito como
+                                    funciona a parte sistemática de um estoque físico.
+                                </li>
+                                <li><span>2018 - 2019 - Projeto animação</span><br>&nbsp;Criei um projeto de animação no
+                                    YouTube, onde desenvolvi muitas habilidades com edição de video, animação 2D,
+                                    tratamento de áudio e marketing (Esse projeto foi muito elogiado pela comunidade,
+                                    mas não tive muito retorno monetário na época, o canal chegou a ter 4000 inscritos
+                                    em 6 meses).<a id="chanel" href="https://www.youtube.com/watch?v=eAHkOEhXsLI&t=0s"
+                                        target="_blank">Canal Youtube</a>
+                                </li>
+                                <li><span>Anos anteriores</span><br>&nbsp;Comecei a trabalhar aos 14 anos ajudando meu pai na construção civil. Aos 16 anos, consegui meu primeiro emprego em uma fábrica de lençóis térmicos. Após um ano, passei a trabalhar no atendimento de uma churrascaria, desempenhando diversas funções, como garçom, atendente de tele-entregas, caixa, limpeza, entre outras atividades.
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contentLinks" id="education">
+                            <ul>
+                                <li><span>2022 - 2024 - Análise e Desenvolvimento de Sistemas</span><br>&nbsp;Estou concluindo minha formação em 2024.</li>
+                                <li><span>2023 - Curso Full Stack OneBitCode</span><br>&nbsp;Conclui os módulos de: HTML
+                                    / CSS / Javascript / Bootstrap / Sass / React / SQL / NodeJS / TypeScript entre outros.</li>
+                                <li>
+                                    <span>Inglês intermediário B1</span><br>&nbsp;
+                                    <br>
+                                    <b>Reading (Leitura):</b> Entendo qualquer texto em inglês.<br>
+                                    <br>
+                                    <b>Speaking (Fala):</b> Consigo formar frases simples o suficiente para comunicação.<br>
+                                    <br>
+                                    <b>Listening (Escuta):</b> Estou desenvolvendo essa habilidade, mas consigo compreender através da escuta e me comunicar tranquilamente.<br>
+                                    <br>
+                                    <b>Writing (Escrita):</b> Consigo formar frases tranquilamente.<br>
+                                </li>
+                                    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="projects">
+            <h1 class="projectsTitle" id="projectsTitle" data-animate="toRight">MEUS PROJETOS</h1>
+            <div id="containerProjects">
+                <div class="card" id="card1">
+                    <div class="contentCard opacityOff">
+                        <div>
+                            <h1>Furniture Inventory Manager</h1>
+                            <p>Javascript / React</p>
+                        </div><a href="#projectsTitle"><button id="btnCard1" class="btnCard">VER MAIS</button></a>
+                        <div class="carouselContainer">
+                            <div class="carouselContent">
+                                <div class="carouselSlides">
+                                    <div class="containerImage">
+                                        <div class="carouselSlide" id="slide1-1"></div>
+                                        <div class="carouselSlide" id="slide1-2"></div>
+                                        <div class="carouselSlide" id="slide1-3"></div><button
+                                            class="carouselBtnPrev"><img src="./images/iconVoltar.webp"
+                                                alt="iconVoltar.webp"></button><button class="carouselBtnNext"><img
+                                                src="./images/iconAvancar.webp" alt="iconAvancar.webp"></button>
+                                    </div>
+                                    <div class="separete"></div>
+                                    <div class="informCard">
+                                        <h1>Furniture Inventory Manager</h1>
+                                        <p>&nbsp;&nbsp;O Furniture Inventory Manager é uma aplicação web desenvolvida em
+                                            React para gerenciamento de estoque de móveis. Este projeto utiliza o
+                                            LocalStorage como banco de dados para armazenar as informações do estoque de
+                                            forma local, proporcionando uma solução simples e eficiente para pequenos
+                                            negócios ou ambientes de teste.</p>
+                                        <div class="slideLinks"><a
+                                                href="https://github.com/WelligthonDarlan/inventoryManager"
+                                                target="_blank">REPOSITÓRIO</a><a
+                                                href="https://welligthondarlan.github.io/inventoryManager/"
+                                                target="_blank">DEPLOY</a></div><img
+                                            src="./images/icons/btnCloseSlide.webp" alt="btnClose"
+                                            class="carouselBtnClose">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="card2">
+                    <div class="contentCard opacityOff">
+                        <div>
+                            <h1>CALCULADORA DE CONSUMO</h1>
+                            <p>Bootstrap / Sass / Javascript</p>
+                        </div><a href="#projectsTitle"><button id="btnCard2" class="btnCard">VER MAIS</button></a>
+                        <div class="carouselContainer">
+                            <div class="carouselContent">
+                                <div class="carouselSlides">
+                                    <div class="containerImage">
+                                        <div class="carouselSlide" id="slide2-1"></div>
+                                        <div class="carouselSlide" id="slide2-2"></div>
+                                        <div class="carouselSlide" id="slide2-3"></div><button
+                                            class="carouselBtnPrev"><img src="./images/iconVoltar.webp"
+                                                alt="iconVoltar.webp"></button><button class="carouselBtnNext"><img
+                                                src="./images/iconAvancar.webp" alt="iconAvancar.webp"></button>
+                                    </div>
+                                    <div class="separete"></div>
+                                    <div class="informCard">
+                                        <h1>CALCULADORA DE CONSUMO</h1>
+                                        <p>&nbsp;&nbsp;A pagina faz um cálculo de consumo de combustível gasto
+                                            diariamente, semanalmente, mensalmente e anual. Além disso ela tem
+                                            informações sobre veículos que tem baixo consumo de combustível, entre
+                                            outras coisas.</p>
+                                        <div class="slideLinks"><a
+                                                href="https://github.com/WelligthonDarlan/Calcular-consumo"
+                                                target="_blank">REPOSITÓRIO</a><a
+                                                href="https://welligthondarlan.github.io/Calcular-consumo/"
+                                                target="_blank">DEPLOY</a></div><img
+                                            src="./images/icons/btnCloseSlide.webp" alt="btnClose"
+                                            class="carouselBtnClose">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="card3">
+                    <div class="contentCard opacityOff">
+                        <div>
+                            <h1>SushiCom - Em produção</h1>
+                            <p>HTML / CSS / Javascript</p>
+                        </div><a href="#projectsTitle"><button id="btnCard3" class="btnCard">VER MAIS</button></a>
+                        <div class="carouselContainer">
+                            <div class="carouselContent">
+                                <div class="carouselSlides">
+                                    <div class="containerImage">
+                                        <div class="carouselSlide" id="slide3-1"></div>
+                                        <div class="carouselSlide" id="slide3-2"></div>
+                                        <div class="carouselSlide" id="slide3-3"></div><button
+                                            class="carouselBtnPrev"><img src="./images/iconVoltar.webp"
+                                                alt="iconVoltar.webp"></button><button class="carouselBtnNext"><img
+                                                src="./images/iconAvancar.webp" alt="iconAvancar.webp"></button>
+                                    </div>
+                                    <div class="separete"></div>
+                                    <div class="informCard">
+                                        <h1>SushiCom - Em produção</h1>
+                                        <p>&nbsp;&nbsp;Página com cardápio de comida japonesa. Ela possui carrinho de
+                                            compra, menu com filtro, contato direto no Whatsapp...</p>
+                                        <div class="slideLinks"><a
+                                                href="https://github.com/WelligthonDarlan/sushi-ecommerce/tree/master"
+                                                target="_blank">REPOSITÓRIO</a><a
+                                                href="https://welligthondarlan.github.io/sushi-ecommerce/"
+                                                target="_blank">DEPLOY</a></div><img
+                                            src="./images/icons/btnCloseSlide.webp" alt="btnClose"
+                                            class="carouselBtnClose">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="card4">
+                    <div class="contentCard opacityOff">
+                        <div>
+                            <h1>Reconnect - Em produção</h1>
+                            <p> Javascript / React / NodeJS / Express / MongoDB / Web scraping...</p>
+                        </div><a href="#projectsTitle"><button id="btnCard4" class="btnCard">VER MAIS</button></a>
+                        <div class="carouselContainer">
+                            <div class="carouselContent">
+                                <div class="carouselSlides">
+                                    <div class="containerImage">
+                                        <video width="640" height="360" controls>
+                                            <source src="./video/Reconnect-new.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="separete"></div>
+                                    <div class="informCard">
+                                        <h1>Reconnect</h1>
+                                        <div class="reconnect">
+                                            <p class="descriptionReconnect">&nbsp;&nbsp;O projeto surgiu da necessidade de aprimorar o gerenciamento de devoluções de mercadorias na empresa, evoluindo para um aplicativo de gerenciamento geral de estoque, composto por quatro páginas principais:</p>
+                                            <p><b>Chat:</b>&nbsp;Integrado com a API do Mercado Livre, semelhante ao WhatsApp, com temporizador de mensagens para melhorar a comunicação com os clientes e monitorar o tempo de resposta.</p>
+                                            <p><b>Estoque Mínimo:</b>&nbsp;Exibe produtos com estoque baixo, facilitando o controle de itens em falta e permitindo uma gestão mais eficiente.</p>
+                                            <p><b>Pedidos:</b>&nbsp;Coleta dados diários e gera gráficos, oferecendo uma visão clara da demanda de produtos e ajudando na análise de tendências.</p>
+                                            <p><b>Devolução:</b>&nbsp;Substituiu o antigo sistema baseado em Excel, proporcionando um controle automatizado e visualmente eficiente de cada caso.</p>
+                                        </div>
+                                        <img
+                                            src="./images/icons/btnCloseSlide.webp" alt="btnClose"
+                                            class="carouselBtnClose">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="card5">
+                    <div class="contentCard opacityOff">
+                        <div>
+                            <h1>Canal Youtube de Animação</h1>
+                            <p>Animate / Photoshop / ...</p>
+                        </div><a href="#projectsTitle"><button id="btnCard5" class="btnCard">VER MAIS</button></a>
+                        <div class="carouselContainer">
+                            <div class="carouselContent">
+                                <div class="carouselSlides">
+                                    <div class="containerImage">
+                                        <div class="carouselSlide" id="slide5-1"></div>
+                                        <div class="carouselSlide" id="slide5-2"></div>
+                                        <div class="carouselSlide" id="slide5-3"></div><button
+                                            class="carouselBtnPrev"><img src="./images/iconVoltar.webp"
+                                                alt="iconVoltar.webp"></button><button class="carouselBtnNext"><img
+                                                src="./images/iconAvancar.webp" alt="iconAvancar.webp"></button>
+                                    </div>
+                                    <div class="separete"></div>
+                                    <div class="informCard">
+                                        <h1>Canal Youtube de Animação</h1>
+                                        <p>&nbsp;&nbsp;Criei um projeto de animação no YouTube, onde desenvolvi muitas
+                                            habilidades com edição de video, animação 2D, tratamento de áudio e
+                                            marketing (Esse projeto foi muito elogiado pela comunidade, mas não tive
+                                            muito retorno monetário na época, o canal chegou a ter 4000 inscritos em 5
+                                            meses)</p>
+                                        <div class="slideLinks"><a
+                                                href="https://www.youtube.com/watch?v=eAHkOEhXsLI&t=0s"
+                                                target="_blank">Link canal</a></div><img
+                                            src="./images/icons/btnCloseSlide.webp" alt="btnClose"
+                                            class="carouselBtnClose">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="card6">
+                    <div class="contentCard opacityOff">
+                        <div>
+                            <h1>Minhas Finanças</h1>
+                            <p>HTML / CSS / Javascript / json-server</p>
+                        </div><a href="#projectsTitle"><button id="btnCard6" class="btnCard">VER MAIS</button></a>
+                        <div class="carouselContainer">
+                            <div class="carouselContent">
+                                <div class="carouselSlides">
+                                    <div class="containerImage">
+                                        <div class="carouselSlide" id="slide6-1"></div>
+                                        <div class="carouselSlide" id="slide6-2"></div>
+                                        <div class="carouselSlide" id="slide6-3"></div><button
+                                            class="carouselBtnPrev"><img src="./images/iconVoltar.webp"
+                                                alt="iconVoltar.webp"></button><button class="carouselBtnNext"><img
+                                                src="./images/iconAvancar.webp" alt="iconAvancar.webp"></button>
+                                    </div>
+                                    <div class="separete"></div>
+                                    <div class="informCard">
+                                        <h1>Minhas Finanças</h1>
+                                        <p>&nbsp;&nbsp;Este projeto em JavaScript oferece uma aplicação simples para
+                                            controle de finanças, permitindo que você gerencie seus débitos e créditos
+                                            de maneira eficiente. Utiliza o json-server para armazenar e recuperar
+                                            dados, proporcionando uma experiência de usuário fluida.</p>
+                                        <div class="slideLinks"><a
+                                                href="https://github.com/WelligthonDarlan/myFinances/tree/master"
+                                                target="_blank">REPOSITÓRIO</a><a
+                                                href="https://welligthondarlan.github.io/myFinances/"
+                                                target="_blank">DEPLOY</a></div><img
+                                            src="./images/icons/btnCloseSlide.webp" alt="btnClose"
+                                            class="carouselBtnClose">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="fadeInScroll">
+            <div class="containerContact">
+                <h1 class="titleContactLeft" data-animate="toRight">ONDE ME ENCONTRAR</h1>
+                <p id="workMe" data-animate="toLeft">Tem alguma dúvida ou quer trabalhar comigo?</p>
+                <div class="containerIcons" data-animate="toRight">
+                    <div class="emailPhoneContainer">
+                        <p><a href="mailto:welldarlan.pw@gmail.com?"><img src="./images/icons/paper-plane-solid.webp"
+                                    alt="sendEmail" class="inconContact"></a>welldarlan.pw@gmail.com</p>
+                        <p><img src="./images/icons/square-phone-solid.webp" alt="phone" class="inconContact">+55 48 9
+                            8824-0117</p>
+                    </div>
+                    <div class="iconSocialMediaContainer"><a href="https://www.linkedin.com/in/welligthon-paluchowski/"
+                            target="_blank"><img src="./images/icons/linkedin.webp" alt="linkedin"
+                                class="inconContact"></a><a href="https://www.instagram.com/well_ligth_on/"
+                            target="_blank"><img src="./images/icons/instagram.webp" alt="instagram"
+                                class="inconContact"></a><a href="https://github.com/WelligthonDarlan"
+                            target="_blank"><img src="./images/icons/square-github.webp" alt="square-github.webp"
+                                class="inconContact"></a></div>
+                </div><a href="./images/curriculo.pdf" download id="download" data-animate="toLeft">CURRÍCULO <img
+                        src="./images/file-arrow-down-solid.webp" alt="imgDownload"></a>
+            </div>
+        </div>
+    </main>
+    <footer class="copyright">
+        <p>Copyright © Welligthon Darlan.</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
